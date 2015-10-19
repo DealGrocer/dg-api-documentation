@@ -196,7 +196,65 @@ Get the summary and deal listing for a specified location.
 Parameter | Required | Sample
 --- | --- | ---
 session | true | 561b671b4f72695642000000
-location | true | dining
+location | true | makati
+
+
+
+## All Deals
+
+> #### Request
+
+```shell
+HTTP/1.1 GET /v1/deals?page=:page
+Authorization: Bearer SESSION
+```
+
+> Deals Found
+
+```shell
+HTTP/1.1 200 OK
+
+{
+  "data":{
+    "name":"All Deals",
+    "deals":[
+      {
+        "name":"Stay in 1-Bedroom Suite for Up to 4 Guests",
+        "merchant-name":"Crosswind Resort Suites",
+        "discount-price":"P3600",
+        "original-price":"P4500",
+        "available":5,
+        "location-names":[
+          "Tagaytay"
+        ],
+        "rating":5,
+        "badge":"Redeem Now",
+        "cover-photo-url":"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"
+      },
+      {
+        "name":"Stay in 1-Bedroom Suite for Up to 4 Guests",
+        "merchant-name":"Crosswind Resort Suites",
+        "discount-price":"P3600",
+        "original-price":"P4500",
+        "available":5,
+        "location-names":[
+          "Tagaytay"
+        ],
+        "rating":5,
+        "badge":"Redeem Now",
+        "cover-photo-url":"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"
+      }
+    ]
+  }
+}
+```
+
+Get the listing of all deals.
+
+Parameter | Required | Sample
+--- | --- | ---
+session | true | 561b671b4f72695642000000
+page | true | 1
 
 
 
