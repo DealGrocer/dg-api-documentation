@@ -1,11 +1,35 @@
-/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
-/* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
-/*
- * Corrects `block` display not defined in IE 8/9.
+@charset "UTF-8";
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
  */
-/* line 12, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 10, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+/* line 20, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 34, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 article,
 aside,
 details,
@@ -14,157 +38,114 @@ figure,
 footer,
 header,
 hgroup,
+main,
+menu,
 nav,
 section,
 summary {
   display: block; }
 
-/*
- * Corrects `inline-block` display not defined in IE 8/9.
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 30, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 55, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 audio,
 canvas,
+progress,
 video {
-  display: inline-block; }
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
 
-/*
- * Prevents modern browsers from displaying `audio` without controls.
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 41, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 68, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 audio:not([controls]) {
   display: none;
   height: 0; }
 
-/*
- * Addresses styling for `hidden` attribute not present in IE 8/9.
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-/* line 50, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-[hidden] {
+/* line 78, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+[hidden],
+template {
   display: none; }
 
-/* ==========================================================================
-   Base
+/* Links
    ========================================================================== */
-/*
- * 1. Sets default font family to sans-serif.
- * 2. Prevents iOS text size adjust after orientation change, without disabling
- *    user zoom.
+/**
+ * Remove the gray background color from active links in IE 10.
  */
-/* line 64, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */ }
+/* line 90, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+a {
+  background-color: transparent; }
 
-/*
- * Removes default margin.
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 74, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-body {
-  margin: 0; }
-
-/* ==========================================================================
-   Links
-   ========================================================================== */
-/*
- * Addresses `outline` inconsistency between Chrome and other browsers.
- */
-/* line 86, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-a:focus {
-  outline: thin dotted; }
-
-/*
- * Improves readability when focused and also mouse hovered in all browsers.
- */
-/* line 94, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 98, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 a:active,
 a:hover {
   outline: 0; }
 
-/* ==========================================================================
-   Typography
+/* Text-level semantics
    ========================================================================== */
-/*
- * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
- * Safari 5, and Chrome.
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-/* line 108, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-h1 {
-  font-size: 2em; }
-
-/*
- * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
- */
-/* line 116, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 110, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 abbr[title] {
   border-bottom: 1px dotted; }
 
-/*
- * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-/* line 124, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 118, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 b,
 strong {
   font-weight: bold; }
 
-/*
- * Addresses styling not present in Safari 5 and Chrome.
+/**
+ * Address styling not present in Safari and Chrome.
  */
-/* line 133, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 127, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 dfn {
   font-style: italic; }
 
-/*
- * Addresses styling not present in IE 8/9.
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
  */
-/* line 141, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 136, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 145, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 mark {
   background: #ff0;
   color: #000; }
 
-/*
- * Corrects font family set oddly in Safari 5 and Chrome.
+/**
+ * Address inconsistent and variable font size in all browsers.
  */
-/* line 151, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em; }
-
-/*
- * Improves readability of pre-formatted text in all browsers.
- */
-/* line 163, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word; }
-
-/*
- * Sets consistent quote types.
- */
-/* line 173, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019"; }
-
-/*
- * Addresses inconsistent and variable font size in all browsers.
- */
-/* line 181, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 154, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 small {
   font-size: 80%; }
 
-/*
- * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 189, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 162, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 sub,
 sup {
   font-size: 75%;
@@ -172,98 +153,116 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 197, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 170, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 sup {
   top: -0.5em; }
 
-/* line 201, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 174, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 sub {
   bottom: -0.25em; }
 
-/* ==========================================================================
-   Embedded content
+/* Embedded content
    ========================================================================== */
-/*
- * Removes border when inside `a` element in IE 8/9.
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
  */
-/* line 213, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 185, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 img {
   border: 0; }
 
-/*
- * Corrects overflow displayed oddly in IE 9.
+/**
+ * Correct overflow not hidden in IE 9/10/11.
  */
-/* line 221, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 193, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 svg:not(:root) {
   overflow: hidden; }
 
-/* ==========================================================================
-   Figures
+/* Grouping content
    ========================================================================== */
-/*
- * Addresses margin not present in IE 8/9 and Safari 5.
+/**
+ * Address margin not present in IE 8/9 and Safari.
  */
-/* line 233, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 204, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 figure {
-  margin: 0; }
+  margin: 1em 40px; }
 
-/* ==========================================================================
-   Forms
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 212, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 222, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 230, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
    ========================================================================== */
-/*
- * Define consistent border, margin, and padding.
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
  */
-/* line 245, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
-/*
- * 1. Corrects color not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 256, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-/*
- * 1. Corrects font family not being inherited in all browsers.
- * 2. Corrects font size not being inherited in all browsers.
- * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
- */
-/* line 267, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 253, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 button,
 input,
+optgroup,
 select,
 textarea {
-  font-family: inherit;
+  color: inherit;
   /* 1 */
-  font-size: 100%;
+  font: inherit;
   /* 2 */
   margin: 0;
   /* 3 */ }
 
-/*
- * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-/* line 281, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-button,
-input {
-  line-height: normal; }
+/* line 267, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+button {
+  overflow: visible; }
 
-/*
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 278, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+button,
+select {
+  text-transform: none; }
+
+/**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
  *    and `video` controls.
- * 2. Corrects inability to style clickable `input` types in iOS.
- * 3. Improves usability and consistency of cursor style between image-type
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 294, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 291, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -273,19 +272,39 @@ input[type="submit"] {
   cursor: pointer;
   /* 3 */ }
 
-/*
+/**
  * Re-set default cursor for disabled elements.
  */
-/* line 306, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 303, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 button[disabled],
-input[disabled] {
+html input[disabled] {
   cursor: default; }
 
-/*
- * 1. Addresses box sizing set to `content-box` in IE 8/9.
- * 2. Removes excess padding in IE 8/9.
+/**
+ * Remove inner padding and border in Firefox 4+.
  */
-/* line 316, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 312, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 323, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 335, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -293,57 +312,87 @@ input[type="radio"] {
   padding: 0;
   /* 2 */ }
 
-/*
- * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 347, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 328, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 358, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   /* 2 */
   box-sizing: content-box; }
 
-/*
- * Removes inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
  */
-/* line 340, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 371, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-/*
- * Removes inner padding and border in Firefox 4+.
+/**
+ * Define consistent border, margin, and padding.
  */
-/* line 349, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
+/* line 380, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
 
-/*
- * 1. Removes default vertical scrollbar in IE 8/9.
- * 2. Improves readability and alignment in all browsers.
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 360, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
-textarea {
-  overflow: auto;
+/* line 391, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+legend {
+  border: 0;
   /* 1 */
-  vertical-align: top;
+  padding: 0;
   /* 2 */ }
 
-/* ==========================================================================
-   Tables
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 400, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 409, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
    ========================================================================== */
-/*
+/**
  * Remove most spacing between table cells.
  */
-/* line 373, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/normalize.css */
+/* line 420, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+/* line 425, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_normalize.css */
+td,
+th {
+  padding: 0; }
 
 /*
 Copyright 2008-2013 Concur Technologies, Inc.
@@ -360,24 +409,23 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.
 */
-/* line 71, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/variables.scss */
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6, html, body {
-  font-family: Arial,sans-serif;
-  font-size: 13px; }
+/* line 70, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_variables.scss */
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6, html, body, .content pre > h4, .content blockquote > h4 {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+  font-size: 12px; }
 
-/* line 76, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/variables.scss */
+/* line 75, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_variables.scss */
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
   font-weight: bold; }
 
-/* line 81, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/variables.scss */
+/* line 80, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_variables.scss */
 .content code, .content pre {
-  font-family: Monaco,Consolas,'Lucida Console',monospace;
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
   font-size: 12px;
   line-height: 1.5; }
 
-/* line 103, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/variables.scss */
+/* line 102, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_variables.scss */
 .content code {
-  -ms-word-break: break-all;
   word-break: break-all;
   /* Non standard for webkit */
   word-break: break-word;
@@ -401,131 +449,131 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.
 */
-/* line 20, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 20, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight table td {
   padding: 5px; }
 
-/* line 21, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 21, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight table pre {
   margin: 0; }
 
-/* line 22, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 22, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight, .highlight .w {
   color: #f8f8f2;
   background-color: #272822; }
 
-/* line 26, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 26, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .err {
   color: #151515;
   background-color: #ac4142; }
 
-/* line 30, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 30, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
   color: #505050; }
 
-/* line 33, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 33, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .cp {
   color: #f4bf75; }
 
-/* line 36, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 36, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .nt {
   color: #f4bf75; }
 
-/* line 39, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 39, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .o, .highlight .ow {
   color: #d0d0d0; }
 
-/* line 42, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 42, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .p, .highlight .pi {
   color: #d0d0d0; }
 
-/* line 45, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 45, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .gi {
   color: #90a959; }
 
-/* line 48, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 48, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .gd {
   color: #ac4142; }
 
-/* line 51, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 51, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .gh {
   color: #6a9fb5;
   background-color: #151515;
   font-weight: bold; }
 
-/* line 56, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 56, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
   color: #aa759f; }
 
-/* line 59, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 59, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .kc {
   color: #d28445; }
 
-/* line 62, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 62, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .kt {
   color: #d28445; }
 
-/* line 65, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 65, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .kd {
   color: #d28445; }
 
-/* line 68, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 68, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
   color: #90a959; }
 
-/* line 71, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 71, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .sr {
   color: #75b5aa; }
 
-/* line 74, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 74, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .si {
   color: #8f5536; }
 
-/* line 77, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 77, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .se {
   color: #8f5536; }
 
-/* line 80, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 80, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .nn {
   color: #f4bf75; }
 
-/* line 83, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 83, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .nc {
   color: #f4bf75; }
 
-/* line 86, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 86, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .no {
   color: #f4bf75; }
 
-/* line 89, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 89, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .na {
   color: #6a9fb5; }
 
-/* line 92, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 92, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
   color: #90a959; }
 
-/* line 95, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 95, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .ss {
   color: #90a959; }
 
-/* line 98, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 98, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
   color: #909090; }
 
-/* line 102, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/syntax.css.scss.erb */
+/* line 102, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_syntax.scss.erb */
 .highlight, .highlight .w {
-  background-color: #272822; }
+  background-color: #292929; }
 
 @font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot");
-  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.svg#icomoon") format("svg");
+  font-family: 'slate';
+  src: url("../fonts/slate.eot?-syv14m");
+  src: url("../fonts/slate.eot?#iefix-syv14m") format("embedded-opentype"), url("../fonts/slate.woff2?-syv14m") format("woff2"), url("../fonts/slate.woff?-syv14m") format("woff"), url("../fonts/slate.ttf?-syv14m") format("truetype"), url("../fonts/slate.svg?-syv14m#slate") format("svg");
   font-weight: normal;
   font-style: normal; }
-/* line 12, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/icon-font.scss */
+/* line 13, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_icon-font.scss */
 .content aside.warning:before, .content aside.notice:before, .content aside.success:before, .tocify-wrapper > .search:before {
-  font-family: 'icomoon';
+  font-family: 'slate';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -533,19 +581,19 @@ under the License.
   text-transform: none;
   line-height: 1; }
 
-/* line 22, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/icon-font.scss */
+/* line 23, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_icon-font.scss */
 .content aside.warning:before {
   content: "\e600"; }
 
-/* line 30, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/icon-font.scss */
+/* line 27, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_icon-font.scss */
 .content aside.notice:before {
   content: "\e602"; }
 
-/* line 46, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/icon-font.scss */
+/* line 31, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_icon-font.scss */
 .content aside.success:before {
   content: "\e606"; }
 
-/* line 50, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/icon-font.scss */
+/* line 35, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/_icon-font.scss */
 .tocify-wrapper > .search:before {
   content: "\e607"; }
 
@@ -566,12 +614,12 @@ under the License.
 */
 /* line 28, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
 html, body {
-  color: #1f1f1f;
+  color: #333;
   padding: 0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FFF;
+  background-color: #eaf2f6;
   height: 100%;
   -webkit-text-size-adjust: none;
   /* Never autoresize text */ }
@@ -583,7 +631,7 @@ html, body {
   border-radius: 40px;
   width: 20px; }
 
-/* line 69, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+/* line 60, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
 .tocify-wrapper {
   transition: left 0.3s ease-in-out;
   overflow-y: auto;
@@ -593,129 +641,128 @@ html, body {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 200px;
-  background-color: #000000;
-  background-image: linear-gradient(to right bottom, #000000 0%, #444444 100%);
-  background-image: -webkit-linear-gradient(left top, #000000 0%, #444444 100%);
+  width: 230px;
+  background-color: #393939;
   font-size: 13px;
   font-weight: bold; }
-  /* line 87, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 76, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper .lang-selector {
     display: none; }
-    /* line 89, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 78, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .tocify-wrapper .lang-selector a {
       padding-top: 0.5em;
       padding-bottom: 0.5em; }
-  /* line 96, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 85, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper > img {
-    width: 100%;
     display: block;
-    margin: 0 auto; }
-  /* line 102, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    width: 100%; }
+  /* line 90, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper > .search {
     position: relative; }
-    /* line 105, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 93, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .tocify-wrapper > .search input {
-      background: #000000;
+      background: #393939;
       border-width: 0 0 1px 0;
       border-color: #666;
       padding: 6px 0 6px 20px;
       box-sizing: border-box;
-      margin: 10px 20px;
-      width: 170px;
+      margin: 10px 15px;
+      width: 200px;
       outline: none;
-      color: #ffffff;
+      color: #fff;
       border-radius: 0;
       /* ios has a default border radius */ }
-    /* line 118, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 106, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .tocify-wrapper > .search:before {
       position: absolute;
       top: 17px;
-      left: 20px;
-      color: #ffffff; }
-  /* line 127, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+      left: 15px;
+      color: #fff; }
+  /* line 115, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper img + .tocify {
-    margin-top: 35px; }
-  /* line 131, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    margin-top: 20px; }
+  /* line 119, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper .search-results {
     margin-top: 0;
     box-sizing: border-box;
     height: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    transition-property: height margin;
+    transition-property: height, margin;
     transition-duration: 180ms;
     transition-timing-function: ease-in-out;
-    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JkYmRiZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JkYmRiZCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JkYmRiZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JkYmRiZCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='), #DEDEDE;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 8px), linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 8px), linear-gradient(to bottom, #bdbdbd, rgba(189, 189, 189, 0) 1.5px), linear-gradient(to top, #bdbdbd, rgba(189, 189, 189, 0) 1.5px), #DEDEDE; }
-    /* line 140, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 8px), linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 8px), linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0) 1.5px), linear-gradient(to top, #939393, rgba(147, 147, 147, 0) 1.5px), #262626; }
+    /* line 128, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .tocify-wrapper .search-results.visible {
       height: 30%;
       margin-bottom: 1em; }
-    /* line 147, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 135, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .tocify-wrapper .search-results li {
-      margin: 1em 20px;
-      line-height: 1;
-      color: #000; }
-    /* line 153, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+      margin: 1em 15px;
+      line-height: 1; }
+    /* line 140, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .tocify-wrapper .search-results a {
-      color: #1f1f1f;
+      color: #fff;
       text-decoration: none; }
-      /* line 157, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+      /* line 144, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
       .tocify-wrapper .search-results a:hover {
         text-decoration: underline; }
-  /* line 164, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 151, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper .tocify-item > a, .tocify-wrapper .toc-footer li {
-    padding: 0 20px 0 20px;
+    padding: 0 15px 0 15px;
     display: block;
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; }
-  /* line 175, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 162, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper ul, .tocify-wrapper li {
     list-style: none;
     margin: 0;
     padding: 0;
     line-height: 28px; }
-  /* line 182, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 169, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper li {
-    color: #ffffff;
-    transition-property: "background";
-    transition-timing-function: "linear";
+    color: #fff;
+    transition-property: background;
+    transition-timing-function: linear;
     transition-duration: 230ms; }
-  /* line 190, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 177, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper .tocify-focus {
-    background-color: #FFF;
-    color: #1f1f1f; }
-  /* line 197, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    box-shadow: 0px 1px 0px #000;
+    background-color: #2467af;
+    color: #fff; }
+  /* line 185, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper .tocify-subheader {
     display: none;
-    background-color: #DEDEDE;
-    font-weight: 500; }
-    /* line 201, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    background-color: #262626;
+    font-weight: 500;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 8px), linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 8px), linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0) 1.5px), linear-gradient(to top, #939393, rgba(147, 147, 147, 0) 1.5px), #262626; }
+    /* line 189, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .tocify-wrapper .tocify-subheader .tocify-item > a {
-      padding-left: 30px;
-      font-size: 12px;
-      color: #1f1f1f; }
-  /* line 209, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+      padding-left: 25px;
+      font-size: 12px; }
+    /* line 196, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    .tocify-wrapper .tocify-subheader > li:last-child {
+      box-shadow: none; }
+  /* line 201, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper .toc-footer {
     padding: 1em 0;
     margin-top: 1em;
-    border-top: 1px dashed #BDBDBD; }
-    /* line 214, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    border-top: 1px dashed #666; }
+    /* line 206, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .tocify-wrapper .toc-footer li, .tocify-wrapper .toc-footer a {
-      color: #ffffff;
+      color: #fff;
       text-decoration: none; }
-    /* line 219, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 211, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .tocify-wrapper .toc-footer a:hover {
       text-decoration: underline; }
-    /* line 223, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 215, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .tocify-wrapper .toc-footer li {
       font-size: 0.8em;
       line-height: 1.7;
       text-decoration: none; }
 
-/* line 233, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+/* line 225, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
 #nav-button {
   padding: 0 1.5em 5em 0;
   display: none;
@@ -729,190 +776,190 @@ html, body {
   opacity: 0.7;
   line-height: 16px;
   transition: left 0.3s ease-in-out; }
-  /* line 234, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 226, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   #nav-button span {
     display: block;
     padding: 6px 6px 6px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(234, 242, 246, 0.7);
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
     -webkit-transform: rotate(-90deg) translate(-100%, 0);
     transform: rotate(-90deg) translate(-100%, 0);
     border-radius: 0 0 0 5px; }
-  /* line 254, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 246, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   #nav-button img {
     height: 16px;
     vertical-align: bottom; }
-  /* line 261, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 253, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   #nav-button:hover {
     opacity: 1; }
-  /* line 262, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 254, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   #nav-button.open {
-    left: 200px; }
+    left: 230px; }
 
-/* line 270, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+/* line 262, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
 .page-wrapper {
-  margin-left: 200px;
+  margin-left: 230px;
   position: relative;
   z-index: 10;
-  background-color: #FFF;
+  background-color: #eaf2f6;
   min-height: 100%;
   padding-bottom: 1px; }
-  /* line 284, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 276, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .page-wrapper .dark-box {
     width: 60%;
-    background-color: #272822;
+    background-color: #393939;
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0; }
-  /* line 293, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 285, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .page-wrapper .lang-selector {
     position: fixed;
-    z-index: 50; }
+    z-index: 50;
+    border-bottom: 5px solid #393939; }
 
-/* line 300, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+/* line 292, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
 .lang-selector {
-  background-color: #000;
+  background-color: #222;
   width: 100%;
-  font-weight: bold;
-  font-size: 1.1em; }
-  /* line 305, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  font-weight: bold; }
+  /* line 296, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .lang-selector a {
     display: block;
     float: left;
-    color: #919191;
+    color: #fff;
     text-decoration: none;
-    padding: 0 20px;
-    line-height: 40px;
+    padding: 0 10px;
+    line-height: 30px;
     outline: 0; }
-    /* line 314, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 305, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .lang-selector a:active, .lang-selector a:focus {
       background-color: #111;
-      color: #919191; }
-    /* line 319, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+      color: #fff; }
+    /* line 310, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .lang-selector a.active {
-      background-color: #444;
-      color: #919191; }
-  /* line 325, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+      background-color: #393939;
+      color: #fff; }
+  /* line 316, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .lang-selector:after {
     content: '';
     clear: both;
     display: block; }
 
-/* line 337, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+/* line 328, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
 .content {
   position: relative;
   z-index: 30; }
-  /* line 342, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 333, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content:after {
     content: '';
     display: block;
     clear: both; }
-  /* line 348, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 339, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content > h1, .content > h2, .content > h3, .content > h4, .content > h5, .content > h6, .content > p, .content > table, .content > ul, .content > ol, .content > aside, .content > dl {
     margin-right: 60%;
     padding: 0 28px;
     box-sizing: border-box;
     display: block;
-    text-shadow: 0px 0px 0px #BDBDBD; }
-  /* line 358, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    text-shadow: 0px 1px 0px #fff; }
+  /* line 349, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content > ul, .content > ol {
     padding-left: 43px; }
-  /* line 363, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 354, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content > h1, .content > h2, .content > div {
     clear: both; }
-  /* line 367, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
-  .content p {
-    line-height: 1.5em !important; }
-  /* line 371, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 358, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content h1 {
     font-size: 30px;
-    padding-top: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 21px;
     margin-top: 2em;
-    margin-bottom: 20px;
-    border-top: 1px solid #ddd; }
-  /* line 380, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    border-top: 1px solid #ddd;
+    background-image: linear-gradient(to bottom, #ffffff, #f9f9f9); }
+  /* line 370, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content h1:first-child, .content div:first-child + h1 {
     border-top-width: 0;
     margin-top: 0; }
-  /* line 385, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 375, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content h2 {
     font-size: 20px;
-    margin-top: 2em;
+    margin-top: 4em;
     margin-bottom: 0;
     border-top: 1px solid #ccc;
     padding-top: 1.2em;
-    padding-bottom: 0.8em;
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
-    background-size: 100%;
+    padding-bottom: 1.2em;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)); }
-  /* line 400, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 388, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content h1 + h2, .content h1 + div + h2 {
-    margin-top: -15px;
+    margin-top: -21px;
     border-top: none; }
-  /* line 405, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 393, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content h3, .content h4, .content h5, .content h6 {
-    font-size: 16px;
-    margin-top: 2em;
+    font-size: 15px;
+    margin-top: 2.5em;
     margin-bottom: 0.8em; }
-  /* line 412, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 400, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content h4, .content h5, .content h6 {
-    font-size: 13px; }
-  /* line 416, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    font-size: 10px; }
+  /* line 404, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content hr {
     margin: 2em 0;
-    border-top: 2px solid #272822;
-    border-bottom: 2px solid #FFF; }
-  /* line 422, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    border-top: 2px solid #393939;
+    border-bottom: 2px solid #eaf2f6; }
+  /* line 410, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content table {
     margin-bottom: 1em;
     overflow: auto; }
-    /* line 425, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 413, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .content table th, .content table td {
       text-align: left;
       vertical-align: top;
       line-height: 1.6; }
-    /* line 431, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 419, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .content table th {
       padding: 5px 10px;
       border-bottom: 1px solid #ccc;
       vertical-align: bottom; }
-    /* line 437, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 425, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .content table td {
       padding: 10px; }
-    /* line 441, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 429, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .content table tr:last-child {
       border-bottom: 1px solid #ccc; }
-    /* line 445, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 433, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .content table tr:nth-child(odd) > td {
-      background-color: white; }
-    /* line 449, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+      background-color: #f9fbfc; }
+    /* line 437, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .content table tr:nth-child(even) > td {
-      background-color: white; }
-  /* line 454, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+      background-color: #f3f7fa; }
+  /* line 442, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content dt {
     font-weight: bold; }
-  /* line 458, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 446, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content dd {
     margin-left: 15px; }
-  /* line 462, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 450, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content p, .content li, .content dt, .content dd {
     line-height: 1.6;
     margin-top: 0; }
-  /* line 467, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 455, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content img {
     max-width: 100%; }
-  /* line 471, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 459, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content code {
     background-color: rgba(0, 0, 0, 0.05);
     padding: 3px;
     border-radius: 3px; }
-  /* line 479, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 467, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content pre > code {
+    white-space: pre;
+    word-break: break-all;
     background-color: transparent;
     padding: 0; }
-  /* line 484, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 474, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content aside {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -921,124 +968,96 @@ html, body {
     margin-bottom: 1.5em;
     background: #8fbcd4;
     line-height: 1.6; }
-    /* line 493, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 483, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .content aside.warning {
       background-color: #c97a7e;
       text-shadow: 0 1px 0 #dfb0b3; }
-    /* line 498, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 488, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .content aside.success {
       background-color: #6ac174;
       text-shadow: 0 1px 0 #a0d7a6; }
-  /* line 504, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 494, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content aside:before {
     vertical-align: middle;
     padding-right: 0.5em;
-    font-size: 13px; }
-  /* line 522, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    font-size: 14px; }
+  /* line 512, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content .search-highlight {
     padding: 2px;
     margin: -2px;
     border-radius: 4px;
     border: 1px solid #F7E633;
     text-shadow: 1px 1px 0 #666;
-    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjEuMCIgeDI9IjAuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZTYzMyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YxZDMyZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
     background: linear-gradient(to top left, #f7e633 0%, #f1d32f 100%); }
 
-/* line 532, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
-button#encode {
-  background-color: #03f;
-  border: 1px solid #03f;
-  width: 100%;
-  padding: 15px;
-  color: #fff; }
-
-/* line 540, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
-button#encode:hover {
-  background-color: #fff;
-  color: #03f;
-  webkit-transition: all 300ms;
-  transition: all 300ms; }
-
-/* line 556, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+/* line 528, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
 .content pre, .content blockquote {
-  background-color: #272822;
-  color: #ddd;
-  padding: 0px 28px 15px;
+  background-color: #292929;
+  color: #fff;
+  padding: 1em 28px 1em;
   margin: 0;
   width: 60%;
   float: right;
   clear: right;
   box-sizing: border-box;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4); }
-  /* line 572, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 544, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  .content pre > h4, .content blockquote > h4 {
+    margin: 0; }
+  /* line 549, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content pre > p, .content blockquote > p {
     margin: 0; }
-  /* line 574, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 553, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content pre a, .content blockquote a {
-    color: #3086c8;
-    text-decoration: none; }
-/* line 584, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
-.content blockquote {
-  padding: 0px 28px 0px; }
-/* line 589, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
-.content blockquote p {
-  color: #ddd;
-  font-weight: bold;
-  padding-bottom: 1.5em;
-  text-transform: uppercase; }
-/* line 596, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
-.content blockquote blockquote {
-  width: 100%;
-  padding: 3px 0px; }
-  /* line 600, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
-  .content blockquote blockquote > p {
-    padding: 0px 0px 28px;
-    color: #ddd;
-    font-weight: normal;
-    font-size: 1.1em; }
+    color: #fff;
+    text-decoration: none;
+    border-bottom: dashed 1px #ccc; }
+/* line 565, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+.content blockquote > p {
+  color: #fff; }
 
 @media (max-width: 930px) {
-  /* line 617, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 578, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper {
-    left: -200px; }
-    /* line 620, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    left: -230px; }
+    /* line 581, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .tocify-wrapper.open {
       left: 0; }
 
-  /* line 625, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 586, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .page-wrapper {
     margin-left: 0; }
 
-  /* line 629, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 590, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   #nav-button {
     display: block; }
 
-  /* line 633, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 594, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper .tocify-item > a {
     padding-top: 0.3em;
     padding-bottom: 0.3em; } }
-@media (max-width: 730px) {
-  /* line 640, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+@media (max-width: 700px) {
+  /* line 601, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .dark-box {
     display: none; }
 
-  /* line 644, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 605, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content > h1, .content > h2, .content > h3, .content > h4, .content > h5, .content > h6, .content > p, .content > table, .content > ul, .content > ol, .content > aside, .content > dl {
     margin-right: 0; }
 
-  /* line 648, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 609, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper .lang-selector {
     display: block; }
 
-  /* line 652, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 613, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .page-wrapper .lang-selector {
     display: none; }
 
-  /* line 656, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 617, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content pre, .content blockquote {
     width: auto;
     float: none; }
 
-  /* line 661, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 622, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content > pre + h1, .content > blockquote + h1, .content > pre + h2, .content > blockquote + h2, .content > pre + h3, .content > blockquote + h3, .content > pre + h4, .content > blockquote + h4, .content > pre + h5, .content > blockquote + h5, .content > pre + h6, .content > blockquote + h6, .content > pre + p, .content > blockquote + p, .content > pre + table, .content > blockquote + table, .content > pre + ul, .content > blockquote + ul, .content > pre + ol, .content > blockquote + ol, .content > pre + aside, .content > blockquote + aside, .content > pre + dl, .content > blockquote + dl {
     margin-top: 28px; } }
