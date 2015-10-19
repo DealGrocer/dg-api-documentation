@@ -548,7 +548,7 @@ Authorization: Bearer SESSION
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/dashboard/mobile?location-name<span class="o">=</span>LOCATION-NAME
+<pre class="highlight shell"><code>HTTP/1.1 GET /v1/dashboard/mobile?location<span class="o">=</span>:location
 Authorization: Bearer SESSION
 </code></pre>
 
@@ -628,9 +628,9 @@ Authorization: Bearer SESSION
 <td>561b671b4f72695642000000</td>
 </tr>
 <tr>
-<td>location-name</td>
+<td>location</td>
 <td>true</td>
-<td>Makati</td>
+<td>makati</td>
 </tr>
 </tbody></table>
 
@@ -776,7 +776,77 @@ Authorization: Bearer SESSION
 <tr>
 <td>location</td>
 <td>true</td>
-<td>dining</td>
+<td>makati</td>
+</tr>
+</tbody></table>
+
+<h2 id="all-deals">All Deals</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 GET /v1/deals?page<span class="o">=</span>:page
+Authorization: Bearer SESSION
+</code></pre>
+
+<blockquote>
+<p>Deals Found</p>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>:<span class="o">{</span>
+    <span class="s2">"name"</span>:<span class="s2">"All Deals"</span>,
+    <span class="s2">"deals"</span>:[
+      <span class="o">{</span>
+        <span class="s2">"name"</span>:<span class="s2">"Stay in 1-Bedroom Suite for Up to 4 Guests"</span>,
+        <span class="s2">"merchant-name"</span>:<span class="s2">"Crosswind Resort Suites"</span>,
+        <span class="s2">"discount-price"</span>:<span class="s2">"P3600"</span>,
+        <span class="s2">"original-price"</span>:<span class="s2">"P4500"</span>,
+        <span class="s2">"available"</span>:5,
+        <span class="s2">"location-names"</span>:[
+          <span class="s2">"Tagaytay"</span>
+        <span class="o">]</span>,
+        <span class="s2">"rating"</span>:5,
+        <span class="s2">"badge"</span>:<span class="s2">"Redeem Now"</span>,
+        <span class="s2">"cover-photo-url"</span>:<span class="s2">"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+        <span class="s2">"name"</span>:<span class="s2">"Stay in 1-Bedroom Suite for Up to 4 Guests"</span>,
+        <span class="s2">"merchant-name"</span>:<span class="s2">"Crosswind Resort Suites"</span>,
+        <span class="s2">"discount-price"</span>:<span class="s2">"P3600"</span>,
+        <span class="s2">"original-price"</span>:<span class="s2">"P4500"</span>,
+        <span class="s2">"available"</span>:5,
+        <span class="s2">"location-names"</span>:[
+          <span class="s2">"Tagaytay"</span>
+        <span class="o">]</span>,
+        <span class="s2">"rating"</span>:5,
+        <span class="s2">"badge"</span>:<span class="s2">"Redeem Now"</span>,
+        <span class="s2">"cover-photo-url"</span>:<span class="s2">"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"</span>
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Get the listing of all deals.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+<tr>
+<td>page</td>
+<td>true</td>
+<td>1</td>
 </tr>
 </tbody></table>
 
