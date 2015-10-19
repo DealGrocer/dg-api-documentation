@@ -1,9 +1,7 @@
-//= require ../lib/_lunr
-//= require ../lib/_jquery.highlight
-(function () {
-  'use strict';
+(function (global) {
 
-  var content, searchResults;
+  var $global = $(global);
+  var content, darkBox, searchResults;
   var highlightOpts = { element: 'span', className: 'search-highlight' };
 
   var index = new lunr.Index();
@@ -30,6 +28,7 @@
 
   function bind() {
     content = $('.content');
+    darkBox = $('.dark-box');
     searchResults = $('.search-results');
 
     $('#input-search').on('keyup', search);
@@ -50,13 +49,12 @@
       if (results.length) {
         searchResults.empty();
         $.each(results, function (index, result) {
-          var elem = document.getElementById(result.ref);
-          searchResults.append("<li><a href='#" + result.ref + "'>" + $(elem).text() + "</a></li>");
+          searchResults.append("<li><a href='#" + result.ref + "'>" + $('#'+result.ref).text() + "</a></li>");
         });
         highlight.call(this);
       } else {
         searchResults.html('<li></li>');
-        $('.search-results li').text('No Results Found for "' + this.value + '"');
+	$('.search-results li').text('No Results Found for "' + this.value + '"');
       }
     } else {
       unhighlight();
@@ -71,4 +69,5 @@
   function unhighlight() {
     content.unhighlight(highlightOpts);
   }
-})();
+
+})(window);
