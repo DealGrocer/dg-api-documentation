@@ -175,7 +175,7 @@ HTTP/1.1 200 OK
 > Authentication failed.
 
 ```shell
-HTTP/1.1 400 Bad Request
+HTTP/1.1 401 Unauthorized
 
 {
   "errors": {
