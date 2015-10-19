@@ -1,13 +1,13 @@
 # Collections
 
-> Request
+> #### Request
 
 ```shell
 HTTP/1.1 GET /v1/collections
 Authorization: Bearer SESSION
 ```
 
-> Collections Found
+> #### Collections Found
 
 ```shell
 HTTP/1.1 200 OK

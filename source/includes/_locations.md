@@ -2,14 +2,14 @@
 
 ## Current Location
 
-> Request
+> #### Request
 
 ```shell
 HTTP/1.1 GET /v1/location?latitude=LATITUDE&longitude=LONGITUDE&accuracy=ACCURACY
 Authorization: Bearer SESSION
 ```
 
-> Location Found
+> #### Location Found
 
 ```shell
 HTTP/1.1 200 OK
@@ -36,14 +36,14 @@ accuracy | true | 30
 
 ## Locations
 
-> Request
+> #### Request
 
 ```shell
 HTTP/1.1 GET /v1/locations?location-name=Makati
 Authorization: Bearer SESSION
 ```
 
-> Locations Found
+> #### Locations Found
 
 ```shell
 HTTP/1.1 200 OK

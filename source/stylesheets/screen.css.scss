@@ -49,25 +49,17 @@ html, body {
 }
 
 @mixin embossed-bg {
-  @include background(
-    linear-gradient(top,
-                    rgba(#000, 0.2),
-                    rgba(#000, 0) 8px),
-    linear-gradient(bottom,
-                    rgba(#000, 0.2),
-                    rgba(#000, 0) 8px),
-    linear-gradient(top,
-                    rgba($nav-embossed-border-top, 1),
-                    rgba($nav-embossed-border-top, 0) 1.5px),
-    linear-gradient(bottom,
-                    rgba($nav-embossed-border-bottom, 1),
-                    rgba($nav-embossed-border-bottom, 0) 1.5px),
-    $nav-subitem-bg
-  );
+  background:
+    linear-gradient(to bottom, rgba(#000, 0.2), rgba(#000, 0) 8px),
+    linear-gradient(to top, rgba(#000, 0.2), rgba(#000, 0) 8px),
+    linear-gradient(to bottom, rgba($nav-embossed-border-top, 1), rgba($nav-embossed-border-top, 0) 1.5px),
+    linear-gradient(to top, rgba($nav-embossed-border-bottom, 1), rgba($nav-embossed-border-bottom, 0) 1.5px),
+    $nav-subitem-bg;
 }
 
 .tocify-wrapper {
-  @include transition(left ease-in-out 0.3s);
+  transition: left 0.3s ease-in-out;
+
   overflow-y: auto;
   overflow-x: hidden;
   position: fixed;
@@ -77,9 +69,6 @@ html, body {
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
-  background-image: linear-gradient(to right bottom, #000000 0%,#444444 100%);
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #000000),color-stop(100%, #444444));
-  background-image: -webkit-linear-gradient(left top, #000000 0%,#444444 100%);
   font-size: 13px;
   font-weight: bold;
 
@@ -94,9 +83,8 @@ html, body {
 
   // This is the logo at the top of the ToC
   &>img {
-    width: 100%;
     display: block;
-    margin: 0 auto;
+    width: 100%;
   }
 
   &>.search {
@@ -107,7 +95,7 @@ html, body {
       border-width: 0 0 1px 0;
       border-color: $search-box-border-color;
       padding: 6px 0 6px 20px;
-      @include box-sizing(border-box);
+      box-sizing: border-box;
       margin: $nav-v-padding $nav-padding;
       width: $nav-width - 30;
       outline: none;
@@ -130,13 +118,13 @@ html, body {
 
   .search-results {
     margin-top: 0;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     height: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    @include transition-property(height margin);
-    @include transition-duration(180ms);
-    @include transition-timing-function(ease-in-out);
+    transition-property: height, margin;
+    transition-duration: 180ms;
+    transition-timing-function: ease-in-out;
     &.visible {
       height: 30%;
       margin-bottom: 1em;
@@ -147,11 +135,10 @@ html, body {
     li {
       margin: 1em $nav-padding;
       line-height: 1;
-      color: #000;
     }
 
     a {
-      color: $main-text;
+      color: $nav-text;
       text-decoration: none;
 
       &:hover {
@@ -181,13 +168,14 @@ html, body {
 
   li {
     color: $nav-text;
-    @include transition-property('background');
-    @include transition-timing-function('linear');
-    @include transition-duration(230ms);
+    transition-property: background;
+    transition-timing-function: linear;
+    transition-duration: 230ms;
   }
 
   // This is the currently selected ToC entry
   .tocify-focus {
+    box-shadow: 0px 1px 0px $nav-active-shadow;
     background-color: $nav-active-bg;
     color: $nav-active-text;
   }
@@ -201,9 +189,13 @@ html, body {
     .tocify-item>a {
       padding-left: $nav-padding + $nav-indent;
       font-size: 12px;
-      color: $main-text;
     }
 
+    // for embossed look:
+    @include embossed-bg;
+    &>li:last-child {
+      box-shadow: none; // otherwise it'll overflow out of the subheader
+    }
   }
 
   .toc-footer {
@@ -236,8 +228,8 @@ html, body {
     $side-pad: $main-padding / 2 - 8px;
     padding: $side-pad $side-pad $side-pad;
     background-color: rgba($main-bg, 0.7);
-    @include transform-origin(0, 0);
-    @include transform(rotate(-90deg) translate(-100%, 0));
+    transform-origin: 0 0;
+    transform: rotate(-90deg) translate(-100%, 0);
     border-radius: 0 0 0 5px;
   }
   padding: 0 1.5em 5em 0; // increase touch size area
@@ -256,7 +248,7 @@ html, body {
     vertical-align: bottom;
   }
 
-  @include transition(left ease-in-out 0.3s);
+  transition: left 0.3s ease-in-out;
 
   &:hover { opacity: 1; }
   &.open {left: $nav-width}
@@ -293,7 +285,7 @@ html, body {
   .lang-selector {
     position: fixed;
     z-index: 50;
-    
+    border-bottom: 5px solid $lang-select-active-bg;
   }
 }
 
@@ -301,14 +293,13 @@ html, body {
   background-color: $lang-select-bg;
   width: 100%;
   font-weight: bold;
-  font-size: 1.1em;
   a {
     display: block;
     float:left;
     color: $lang-select-text;
     text-decoration: none;
-    padding: 0 20px;
-    line-height: 40px;
+    padding: 0 10px;
+    line-height: 30px;
     outline: 0;
 
     &:active, &:focus {
@@ -348,7 +339,7 @@ html, body {
   &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
     margin-right: $examples-width;
     padding: 0 $main-padding;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     display: block;
     @include text-shadow($main-embossed-text-shadow);
 
@@ -364,17 +355,16 @@ html, body {
     clear:both;
   }
 
-  p {
-    line-height: 1.5em !important;
-  }
-
   h1 {
     @extend %header-font;
     font-size: 30px;
-    padding-top: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
-    margin-bottom: 20px;
     border-top: 1px solid #ddd;
+    background-image: linear-gradient(to bottom, #fff, #f9f9f9);
   }
 
   h1:first-child, div:first-child + h1 {
@@ -385,14 +375,12 @@ html, body {
   h2 {
     @extend %header-font;
     font-size: 20px;
-    margin-top: 2em;
+    margin-top: 4em;
     margin-bottom: 0;
     border-top: 1px solid #ccc;
     padding-top: 1.2em;
-    padding-bottom: 0.8em;
-    @include background-image(
-      linear-gradient(top, rgba(#fff,0.4), rgba(#fff, 0))
-    );
+    padding-bottom: 1.2em;
+    background-image: linear-gradient(to bottom, rgba(#fff, 0.4), rgba(#fff, 0));
   }
 
   // h2s right after h1s should bump right up
@@ -404,13 +392,13 @@ html, body {
 
   h3, h4, h5, h6 {
     @extend %header-font;
-    font-size: 16px;
-    margin-top: 2em;
+    font-size: 15px;
+    margin-top: 2.5em;
     margin-bottom: 0.8em;
   }
 
   h4, h5, h6 {
-    font-size: 13px;
+    font-size: 10px;
   }
 
   hr {
@@ -477,6 +465,8 @@ html, body {
   }
 
   pre>code {
+    white-space: pre;
+    word-break: break-all;
     background-color: transparent;
     padding: 0;
   }
@@ -504,7 +494,7 @@ html, body {
   aside:before {
     vertical-align: middle;
     padding-right: 0.5em;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   aside.notice:before {
@@ -525,26 +515,8 @@ html, body {
     border-radius: 4px;
     border: 1px solid #F7E633;
     @include text-shadow(1px 1px 0 #666);
-    @include background(linear-gradient(bottom right, #F7E633 0%, #F1D32F 100%));
+    background: linear-gradient(to top left, #F7E633 0%, #F1D32F 100%);
   }
-}
-
-button#encode {
-  background-color: #03f; 
-  border: 1px solid #03f;
-  width: 100%; 
-  padding: 15px; 
-  color: #fff;
-}
-
-button#encode:hover {
-  background-color: #fff; 
-  color: #03f;
-  webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -o-transition: all 300ms;
-  transition: all 300ms;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -555,25 +527,33 @@ button#encode:hover {
 .content {
   pre, blockquote {
     background-color: $code-bg;
-    color: #ddd;
+    color: #fff;
 
-    padding: 0px $main-padding 15px;
+    padding: 1em $main-padding 1em;
     margin: 0;
     width: $examples-width;
 
     float:right;
     clear:right;
 
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     @include text-shadow(0px 1px 2px rgba(0,0,0,0.4));
 
     @extend %right-col;
 
-    &>p { margin: 0; }
+    &>h4 {
+      @extend %default-font;
+      margin: 0;
+    }
+
+    &>p {
+      margin: 0;
+    }
 
     a {
-      color: #3086c8;
+      color: #fff;
       text-decoration: none;
+      border-bottom: dashed 1px #ccc;
     }
   }
 
@@ -582,28 +562,9 @@ button#encode:hover {
   }
 
   blockquote {
-    padding: 0px $main-padding 0px;
-  }
-
-  //this is the heading for the code snippetss
-  blockquote p {
-    color: #ddd;
-    font-weight: bold;
-    padding-bottom: 1.5em;
-    text-transform: uppercase;
-  }
-
-  blockquote blockquote {
-    width: 100%;
-    padding: 3px 0px;
-
     &>p {
-      padding: 0px 0px $main-padding;
-      color: #ddd;
-      font-weight: normal;
-      font-size: 1.1em;
+      color: $nav-text;
     }
-
   }
 }
 

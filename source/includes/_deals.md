@@ -2,14 +2,14 @@
 
 ## Mobile Dashboard
 
-> Request
+> #### Request
 
 ```shell
 HTTP/1.1 GET /v1/dashboard/mobile?location-name=LOCATION-NAME
 Authorization: Bearer SESSION
 ```
 
-> Dashboard Found
+> #### Dashboard Found
 
 ```shell
 HTTP/1.1 200 OK
@@ -80,7 +80,7 @@ location-name | true | Makati
 
 ## Deals By Collection
 
-> Request
+> #### Request
 
 ```shell
 HTTP/1.1 GET /v1/collections/:collection/deals
@@ -141,7 +141,7 @@ collection | true | dining
 
 ## Deals By Location
 
-> Request
+> #### Request
 
 ```shell
 HTTP/1.1 GET /v1/locations/:location/deals
@@ -202,14 +202,14 @@ location | true | dining
 
 ## Deal
 
-> Request
+> #### Request
 
 ```shell
 HTTP/1.1 GET /v1/deals/:deal
 Authorization: Bearer SESSION
 ```
 
-> Deal Found
+> #### Deal Found
 
 ```shell
 HTTP/1.1 200 OK
