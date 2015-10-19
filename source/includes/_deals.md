@@ -5,7 +5,7 @@
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/dashboard/mobile?location-name=LOCATION-NAME
+HTTP/1.1 GET /v1/dashboard/mobile?location=:location
 Authorization: Bearer SESSION
 ```
 
@@ -75,7 +75,7 @@ Get information necessary for rendering the mobile dashboard.
 Parameter | Required | Sample
 --- | --- | ---
 session | true | 561b671b4f72695642000000
-location-name | true | Makati
+location | true | makati
 
 
 ## Deals By Collection
