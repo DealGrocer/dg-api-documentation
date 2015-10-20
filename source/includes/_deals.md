@@ -303,28 +303,28 @@ HTTP/1.1 200 OK
       "https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"
     ],
     "branches":[
-    	{
-	    	"name":"Makati",
-	    	"key":"makati",
-	    	"options":[
-	    		{
-	    			"name":"Schedule",
-	    			"key":"Schedule",
-	    			"values":[
-	    				{
-	    					"name":"Morning"
-	    					"key":"Morning"
-	    					"available":3
-	    				},
-	    				{
-	    					"name":"Evening"
-	    					"key":"Evening"
-	    					"available":2
-	    				}
-	    			]
-	    		}
-	    	]
-    	}
+      {
+        "name":"Makati",
+        "key":"makati",
+        "options":[
+          {
+            "name":"Schedule",
+            "key":"Schedule",
+            "values":[
+              {
+                "name":"Morning",
+                "key":"Morning",
+                "available":3
+              },
+              {
+                "name":"Evening",
+                "key":"Evening",
+                "available":2
+              }
+            ]
+          }
+        ]
+      }
     ]
   }
 }
