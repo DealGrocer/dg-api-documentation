@@ -5,7 +5,7 @@
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/dashboard/mobile?location=:location
+HTTP/1.1 GET /v1/dashboard/mobile?location=:location&page=:page
 Authorization: Bearer SESSION
 ```
 
@@ -76,6 +76,7 @@ Parameter | Required | Sample
 --- | --- | ---
 session | true | 561b671b4f72695642000000
 location | true | makati
+page | false | 1
 
 
 ## Deals By Collection
