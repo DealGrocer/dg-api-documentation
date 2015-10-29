@@ -4,13 +4,15 @@
 
 ```shell
 HTTP/1.1 GET /v1/collections
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 ```
 
 > #### Collections Found
 
 ```shell
 HTTP/1.1 200 OK
+Content-Type: application/json
 
 {
   "data":[

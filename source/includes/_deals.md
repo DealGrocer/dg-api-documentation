@@ -6,13 +6,15 @@
 
 ```shell
 HTTP/1.1 GET /v1/dashboard/mobile?location=:location&page=:page
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 ```
 
 > #### Dashboard Found
 
 ```shell
 HTTP/1.1 200 OK
+Content-Type: application/json
 
 {
   "data":{
@@ -85,13 +87,15 @@ page | false | 1
 
 ```shell
 HTTP/1.1 GET /v1/collections/:collection/deals
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 ```
 
 > Summary & Deals Found
 
 ```shell
 HTTP/1.1 200 OK
+Content-Type: application/json
 
 {
   "data":{
@@ -146,13 +150,15 @@ collection | true | dining
 
 ```shell
 HTTP/1.1 GET /v1/locations/:location/deals
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 ```
 
 > Summary & Deals Found
 
 ```shell
 HTTP/1.1 200 OK
+Content-Type: application/json
 
 {
   "data":{
@@ -207,13 +213,15 @@ location | true | makati
 
 ```shell
 HTTP/1.1 GET /v1/deals?page=:page
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 ```
 
 > Deals Found
 
 ```shell
 HTTP/1.1 200 OK
+Content-Type: application/json
 
 {
   "data":{
@@ -265,13 +273,15 @@ page | true | 1
 
 ```shell
 HTTP/1.1 GET /v1/deals/:deal
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 ```
 
 > #### Deal Found
 
 ```shell
 HTTP/1.1 200 OK
+Content-Type: application/json
 
 {
   "data":{

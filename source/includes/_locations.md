@@ -5,14 +5,16 @@
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/location?latitude=LATITUDE&longitude=LONGITUDE&accuracy=ACCURACY
-Authorization: Bearer SESSION
+HTTP/1.1 GET /v1/location?latitude=:latitude&longitude=:longitude&accuracy=:accuracy
+Content-Type: application/json
+Authorization: Bearer :session
 ```
 
 > #### Location Found
 
 ```shell
 HTTP/1.1 200 OK
+Content-Type: application/json
 
 {
   "data": {
@@ -39,14 +41,16 @@ accuracy | true | 30
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/locations?location-name=Makati
-Authorization: Bearer SESSION
+HTTP/1.1 GET /v1/locations?location=:location
+Content-Type: application/json
+Authorization: Bearer :session
 ```
 
 > #### Locations Found
 
 ```shell
 HTTP/1.1 200 OK
+Content-Type: application/json
 
 {
   "data":{
@@ -144,4 +148,4 @@ Get location listing.
 Parameter | Required | Sample
 --- | --- | ---
 session | true | 561b671b4f72695642000000
-location-name | true | Makati
+location | true | Makati

@@ -6,6 +6,7 @@
 
 ```shell
 HTTP/1.1 POST /v1/signup/validation
+Content-Type: application/json
 
 {
   "data": {
@@ -20,12 +21,14 @@ HTTP/1.1 POST /v1/signup/validation
 
 ```shell
 HTTP/1.1 200 OK
+Content-Type: application/json
 ```
 
 > #### Signup Validation Failed
 
 ```shell
 HTTP/1.1 400 Bad Request
+Content-Type: application/json
 
 {
   "errors": {
@@ -51,6 +54,7 @@ password | true | hUE4PT7NkuFCuG
 
 ```shell
 HTTP/1.1 POST /v1/signup
+Content-Type: application/json
 
 {
   "data": {
@@ -69,6 +73,7 @@ HTTP/1.1 POST /v1/signup
 
 ```shell
 HTTP/1.1 200 OK
+Content-Type: application/json
 
 {
   "data": {
@@ -81,6 +86,7 @@ HTTP/1.1 200 OK
 
 ```shell
 HTTP/1.1 400 Bad Request
+Content-Type: application/json
 
 {
   "errors": {
@@ -109,7 +115,8 @@ gender | true | Male
 
 ```shell
 HTTP/1.1 POST /v1/signup/confirmation
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 
 {
   "data": {
@@ -128,6 +135,7 @@ HTTP/1.1 200 OK
 
 ```shell
 HTTP/1.1 400 Bad Request
+Content-Type: application/json
 
 {
   "errors": {
@@ -151,6 +159,7 @@ code | true | ABCD
 
 ```shell
 HTTP/1.1 POST /v1/authentication
+Content-Type: application/json
 
 {
   "data": {
@@ -164,6 +173,7 @@ HTTP/1.1 POST /v1/authentication
 
 ```shell
 HTTP/1.1 200 OK
+Content-Type: application/json
 
 {
   "data": {
@@ -176,6 +186,7 @@ HTTP/1.1 200 OK
 
 ```shell
 HTTP/1.1 401 Unauthorized
+Content-Type: application/json
 
 {
   "errors": {
