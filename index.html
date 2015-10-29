@@ -52,6 +52,7 @@
 <h4 id="request">Request</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 POST /v1/signup/validation
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>: <span class="o">{</span>
@@ -66,12 +67,14 @@
 <h4 id="signup-validation-passed">Signup Validation Passed</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
 </code></pre>
 
 <blockquote>
 <h4 id="signup-validation-failed">Signup Validation Failed</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 400 Bad Request
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"errors"</span>: <span class="o">{</span>
@@ -113,6 +116,7 @@
 <h4 id="request">Request</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 POST /v1/signup
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>: <span class="o">{</span>
@@ -131,6 +135,7 @@
 <h4 id="signup-successful">Signup Successful</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>: <span class="o">{</span>
@@ -143,6 +148,7 @@
 <h4 id="signup-failed">Signup Failed</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 400 Bad Request
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"errors"</span>: <span class="o">{</span>
@@ -203,7 +209,8 @@
 <h4 id="request">Request</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 POST /v1/signup/confirmation
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 
 <span class="o">{</span>
   <span class="s2">"data"</span>: <span class="o">{</span>
@@ -222,6 +229,7 @@ Authorization: Bearer SESSION
 <p>Signup confirmation failed.</p>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 400 Bad Request
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"errors"</span>: <span class="o">{</span>
@@ -257,6 +265,7 @@ Authorization: Bearer SESSION
 <h4 id="request">Request</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 POST /v1/authentication
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>: <span class="o">{</span>
@@ -270,6 +279,7 @@ Authorization: Bearer SESSION
 <h4 id="authentication-successful">Authentication successful.</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>: <span class="o">{</span>
@@ -282,6 +292,7 @@ Authorization: Bearer SESSION
 <h4 id="authentication-failed">Authentication failed.</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 401 Unauthorized
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"errors"</span>: <span class="o">{</span>
@@ -318,14 +329,16 @@ Authorization: Bearer SESSION
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/location?latitude<span class="o">=</span>LATITUDE&amp;longitude<span class="o">=</span>LONGITUDE&amp;accuracy<span class="o">=</span>ACCURACY
-Authorization: Bearer SESSION
+<pre class="highlight shell"><code>HTTP/1.1 GET /v1/location?latitude<span class="o">=</span>:latitude&amp;longitude<span class="o">=</span>:longitude&amp;accuracy<span class="o">=</span>:accuracy
+Content-Type: application/json
+Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
 <h4 id="location-found">Location Found</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>: <span class="o">{</span>
@@ -372,14 +385,16 @@ Authorization: Bearer SESSION
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/locations?location-name<span class="o">=</span>Makati
-Authorization: Bearer SESSION
+<pre class="highlight shell"><code>HTTP/1.1 GET /v1/locations?location<span class="o">=</span>:location
+Content-Type: application/json
+Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
 <h4 id="locations-found">Locations Found</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>:<span class="o">{</span>
@@ -487,7 +502,7 @@ Authorization: Bearer SESSION
 <td>561b671b4f72695642000000</td>
 </tr>
 <tr>
-<td>location-name</td>
+<td>location</td>
 <td>true</td>
 <td>Makati</td>
 </tr>
@@ -499,13 +514,15 @@ Authorization: Bearer SESSION
 <h4 id="request">Request</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 GET /v1/collections
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
 <h4 id="collections-found">Collections Found</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>:[
@@ -549,13 +566,15 @@ Authorization: Bearer SESSION
 <h4 id="request">Request</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 GET /v1/dashboard/mobile?location<span class="o">=</span>:location&amp;page<span class="o">=</span>:page
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
 <h4 id="dashboard-found">Dashboard Found</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>:<span class="o">{</span>
@@ -645,13 +664,15 @@ Authorization: Bearer SESSION
 <h4 id="request">Request</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 GET /v1/collections/:collection/deals
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
 <p>Summary &amp; Deals Found</p>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>:<span class="o">{</span>
@@ -718,13 +739,15 @@ Authorization: Bearer SESSION
 <h4 id="request">Request</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 GET /v1/locations/:location/deals
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
 <p>Summary &amp; Deals Found</p>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>:<span class="o">{</span>
@@ -791,13 +814,15 @@ Authorization: Bearer SESSION
 <h4 id="request">Request</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 GET /v1/deals?page<span class="o">=</span>:page
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
 <p>Deals Found</p>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>:<span class="o">{</span>
@@ -861,13 +886,15 @@ Authorization: Bearer SESSION
 <h4 id="request">Request</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 GET /v1/deals/:deal
-Authorization: Bearer SESSION
+Content-Type: application/json
+Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
 <h4 id="deal-found">Deal Found</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>:<span class="o">{</span>
