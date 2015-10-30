@@ -164,7 +164,7 @@ Content-Type: application/json
 {
   "data": {
     "email": email,
-    "password": password,
+    "password": password
   }
 }
 ```
