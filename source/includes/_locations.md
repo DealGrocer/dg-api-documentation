@@ -19,7 +19,8 @@ Content-Type: application/json
 {
   "data": {
     "location": {
-      "name": "Makati"
+      "name": "Makati",
+      "key": "makati"
     }
   }
 }
@@ -32,7 +33,7 @@ Parameter | Required | Sample
 session | true | 561b671b4f72695642000000
 latitude | true | 14.5525991
 longitude | true | 121.0502954
-accuracy | true | 30
+accuracy | false | 30
 
 
 
