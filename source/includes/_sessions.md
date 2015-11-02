@@ -201,3 +201,40 @@ Parameter | Required | Sample
 --- | --- | ---
 email | true | me@email.com
 password | true | hUE4PT7NkuFCuG
+
+## Reset Password
+
+```shell
+HTTP/1.1 POST /v1/password/reset
+Content-Type: application/json
+
+{
+  "data": {
+    "email": email
+  }
+}
+```
+
+> #### Reset Password Successful
+
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
+```
+
+> #### Reset Password Failed
+
+```shell
+HTTP/1.1 404 Not Found
+Content-Type: application/json
+
+{
+  "errors": {
+    "email": "No matching email not found."
+  }
+}
+```
+
+Parameter | Required | Sample
+--- | --- | ---
+email | true | me@email.com
