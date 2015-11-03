@@ -291,19 +291,6 @@ Content-Type: application/json
     "original-price":"P4500",
     "installment-price":"P18678",
     "available":5,
-    "locations":[
-      {
-        "name":"Makati",
-        "key":"makati",
-        "address":"Ground Level, Somerset Olympia, Makati Ave. cor. Sto. Tomas St., Makati City",
-        "latitude":"3248235789",
-        "longitude":"432563278",
-        "phone-numbers":[
-          "+63 2 432 8579",
-          "+63 2 573 8456"
-        ]
-      }
-    ],
     "rating":5,
     "badge":"Redeem Now",
     "gist":"San Juan is Manila's smallest city in terms of distance. Despite of this, it is slowly becoming recognized as a mecca for foodies. What started out as a myriad of Chinese restaurants eventually evolved to a melting pot of different cuisines, catering to nearly every craving in existence.",
@@ -315,8 +302,15 @@ Content-Type: application/json
     ],
     "branches":[
       {
+        "id":"540e745169702d79643d0000",
         "name":"Makati",
-        "key":"makati",
+        "address":"Ground Level, Somerset Olympia, Makati Ave. cor. Sto. Tomas St., Makati City",
+        "latitude":"3248235789",
+        "longitude":"432563278",
+        "phone-numbers":[
+          "+63 2 432 8579",
+          "+63 2 573 8456"
+        ],
         "options":[
           {
             "name":"Schedule",
