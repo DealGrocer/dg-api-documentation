@@ -322,6 +322,51 @@ Content-Type: application/json
 </tr>
 </tbody></table>
 
+<h2 id="reset-password">Reset Password</h2>
+<pre class="highlight shell"><code>HTTP/1.1 POST /v1/password/reset
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"email"</span>: email
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h4 id="reset-password-successful">Reset Password Successful</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+</code></pre>
+
+<blockquote>
+<h4 id="reset-password-failed">Reset Password Failed</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 404 Not Found
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"errors"</span>: <span class="o">{</span>
+    <span class="s2">"email"</span>: <span class="s2">"No matching email not found."</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>true</td>
+<td>me@email.com</td>
+</tr>
+</tbody></table>
+
           <h1 id="locations">Locations</h1>
 
 <h2 id="current-location">Current Location</h2>
@@ -905,19 +950,6 @@ Content-Type: application/json
     <span class="s2">"original-price"</span>:<span class="s2">"P4500"</span>,
     <span class="s2">"installment-price"</span>:<span class="s2">"P18678"</span>,
     <span class="s2">"available"</span>:5,
-    <span class="s2">"locations"</span>:[
-      <span class="o">{</span>
-        <span class="s2">"name"</span>:<span class="s2">"Makati"</span>,
-        <span class="s2">"key"</span>:<span class="s2">"makati"</span>,
-        <span class="s2">"address"</span>:<span class="s2">"Ground Level, Somerset Olympia, Makati Ave. cor. Sto. Tomas St., Makati City"</span>,
-        <span class="s2">"latitude"</span>:<span class="s2">"3248235789"</span>,
-        <span class="s2">"longitude"</span>:<span class="s2">"432563278"</span>,
-        <span class="s2">"phone-numbers"</span>:[
-          <span class="s2">"+63 2 432 8579"</span>,
-          <span class="s2">"+63 2 573 8456"</span>
-        <span class="o">]</span>
-      <span class="o">}</span>
-    <span class="o">]</span>,
     <span class="s2">"rating"</span>:5,
     <span class="s2">"badge"</span>:<span class="s2">"Redeem Now"</span>,
     <span class="s2">"gist"</span>:<span class="s2">"San Juan is Manila's smallest city in terms of distance. Despite of this, it is slowly becoming recognized as a mecca for foodies. What started out as a myriad of Chinese restaurants eventually evolved to a melting pot of different cuisines, catering to nearly every craving in existence."</span>,
@@ -929,8 +961,15 @@ Content-Type: application/json
     <span class="o">]</span>,
     <span class="s2">"branches"</span>:[
       <span class="o">{</span>
+        <span class="s2">"id"</span>:<span class="s2">"540e745169702d79643d0000"</span>,
         <span class="s2">"name"</span>:<span class="s2">"Makati"</span>,
-        <span class="s2">"key"</span>:<span class="s2">"makati"</span>,
+        <span class="s2">"address"</span>:<span class="s2">"Ground Level, Somerset Olympia, Makati Ave. cor. Sto. Tomas St., Makati City"</span>,
+        <span class="s2">"latitude"</span>:<span class="s2">"3248235789"</span>,
+        <span class="s2">"longitude"</span>:<span class="s2">"432563278"</span>,
+        <span class="s2">"phone-numbers"</span>:[
+          <span class="s2">"+63 2 432 8579"</span>,
+          <span class="s2">"+63 2 573 8456"</span>
+        <span class="o">]</span>,
         <span class="s2">"options"</span>:[
           <span class="o">{</span>
             <span class="s2">"name"</span>:<span class="s2">"Schedule"</span>,
