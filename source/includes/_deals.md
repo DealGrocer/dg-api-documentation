@@ -239,7 +239,7 @@ Content-Type: application/json
         "rating":5,
         "badge":"Redeem Now",
         "cover-photo-url":"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"
-      },
+      }
       {
         "name":"Stay in 1-Bedroom Suite for Up to 4 Guests",
         "merchant-name":"Crosswind Resort Suites",
@@ -277,7 +277,7 @@ Content-Type: application/json
 Authorization: Bearer :session
 ```
 
-> #### Deal Found
+> #### Single Branch Deal Without Pickers
 
 ```shell
 HTTP/1.1 200 OK
@@ -311,22 +311,215 @@ Content-Type: application/json
           "+63 2 432 8579",
           "+63 2 573 8456"
         ],
-        "options":[
+        "variants":[
           {
-            "name":"Schedule",
-            "key":"Schedule",
-            "values":[
-              {
-                "name":"Morning",
-                "key":"Morning",
-                "available":3
-              },
-              {
-                "name":"Evening",
-                "key":"Evening",
-                "available":2
-              }
-            ]
+            "id": "55ffed3869702d1df8920100"
+            "properties": {},
+            "available": 15
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+> #### Single Branch Deal With Pickers
+
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data":{
+    "name":"Stay in 1-Bedroom Suite for Up to 4 Guests",
+    "merchant-name":"Crosswind Resort Suites",
+    "discount-price":"P3600",
+    "original-price":"P4500",
+    "installment-price":"P18678",
+    "available":5,
+    "rating":5,
+    "badge":"Redeem Now",
+    "gist":"San Juan is Manila's smallest city in terms of distance. Despite of this, it is slowly becoming recognized as a mecca for foodies. What started out as a myriad of Chinese restaurants eventually evolved to a melting pot of different cuisines, catering to nearly every craving in existence.",
+    "terms":"Valid for Friday, Saturday, or Sunday check-ins from August 22, 2015 to December 27, 2015. Subject to availability.",
+    "cover-photo-url":"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg",
+    "carousel-photo-urls":[
+      "https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg",
+      "https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"
+    ],
+    "branches":[
+      {
+        "id":"540e745169702d79643d0000",
+        "name":"SM Aura",
+        "address":"Level 4, Food on Four area, BGC, Taguig",
+        "latitude":"3248235789",
+        "longitude":"432563278",
+        "phone-numbers":[
+          "+63 2 432 8579",
+          "+63 2 573 8456"
+        ],
+        "variants":[
+          {
+            "id": "55ffed3869702d1df8920100"
+            "properties": {
+              "Schedule": "Morning"
+            },
+            "available": 15
+          },
+          {
+            "id": "55ffed3869702d1df8920100"
+            "properties": {
+              "Schedule": "Afternoon"
+            },
+            "available": 18
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+> #### Multiple Branch Deal Without Pickers
+
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data":{
+    "name":"Stay in 1-Bedroom Suite for Up to 4 Guests",
+    "merchant-name":"Crosswind Resort Suites",
+    "discount-price":"P3600",
+    "original-price":"P4500",
+    "installment-price":"P18678",
+    "available":5,
+    "rating":5,
+    "badge":"Redeem Now",
+    "gist":"San Juan is Manila's smallest city in terms of distance. Despite of this, it is slowly becoming recognized as a mecca for foodies. What started out as a myriad of Chinese restaurants eventually evolved to a melting pot of different cuisines, catering to nearly every craving in existence.",
+    "terms":"Valid for Friday, Saturday, or Sunday check-ins from August 22, 2015 to December 27, 2015. Subject to availability.",
+    "cover-photo-url":"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg",
+    "carousel-photo-urls":[
+      "https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg",
+      "https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"
+    ],
+    "branches":[
+      {
+        "id":"540e745169702d79643d0000",
+        "name":"Makati",
+        "address":"Ground Level, Somerset Olympia, Makati Ave. cor. Sto. Tomas St., Makati City",
+        "latitude":"3248235789",
+        "longitude":"432563278",
+        "phone-numbers":[
+          "+63 2 432 8579",
+          "+63 2 573 8456"
+        ],
+        "variants":[
+          {
+            "id": "55ffed3869702d1df8920100"
+            "properties": {},
+            "available": 15
+          }
+        ]
+      },
+      {
+        "id":"540e745169702d79643d0000",
+        "name":"SM Megamall",
+        "address":"2nd Floor (near Cotton On & Toby's Sports Shop), Bldg. A, Mandaluyong",
+        "latitude":"3248235789",
+        "longitude":"432563278",
+        "phone-numbers":[
+          "+63 2 432 8579",
+          "+63 2 573 8456"
+        ],
+        "variants":[
+          {
+            "id": "55ffed3869702d1df8920100"
+            "properties": {}
+            "available": 18
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+> #### Multiple Branch Deal With Pickers
+
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data":{
+    "name":"Stay in 1-Bedroom Suite for Up to 4 Guests",
+    "merchant-name":"Crosswind Resort Suites",
+    "discount-price":"P3600",
+    "original-price":"P4500",
+    "installment-price":"P18678",
+    "available":5,
+    "rating":5,
+    "badge":"Redeem Now",
+    "gist":"San Juan is Manila's smallest city in terms of distance. Despite of this, it is slowly becoming recognized as a mecca for foodies. What started out as a myriad of Chinese restaurants eventually evolved to a melting pot of different cuisines, catering to nearly every craving in existence.",
+    "terms":"Valid for Friday, Saturday, or Sunday check-ins from August 22, 2015 to December 27, 2015. Subject to availability.",
+    "cover-photo-url":"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg",
+    "carousel-photo-urls":[
+      "https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg",
+      "https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"
+    ],
+    "branches":[
+      {
+        "id":"540e745169702d79643d0000",
+        "name":"SM Aura",
+        "address":"Level 4, Food on Four area, BGC, Taguig",
+        "latitude":"3248235789",
+        "longitude":"432563278",
+        "phone-numbers":[
+          "+63 2 432 8579",
+          "+63 2 573 8456"
+        ],
+        "variants":[
+          {
+            "id": "55ffed3869702d1df8920100"
+            "properties": {
+              "Schedule": "Morning"
+            },
+            "available": 15
+          },
+          {
+            "id": "55ffed3869702d1df8920100"
+            "properties": {
+              "Schedule": "Afternoon"
+            },
+            "available": 18
+          }
+        ]
+      },
+      {
+        "id":"540e745169702d79643d0000",
+        "name":"SM Megamall",
+        "address":"2nd Floor (near Cotton On & Toby's Sports Shop), Bldg. A, Mandaluyong",
+        "latitude":"3248235789",
+        "longitude":"432563278",
+        "phone-numbers":[
+          "+63 2 432 8579",
+          "+63 2 573 8456"
+        ],
+        "variants":[
+          {
+            "id": "55ffed3869702d1df8920100"
+            "properties": {
+              "Schedule": "Morning"
+            },
+            "available": 15
+          },
+          {
+            "id": "55ffed3869702d1df8920100"
+            "properties": {
+              "Schedule": "Afternoon"
+            },
+            "available": 18
           }
         ]
       }
