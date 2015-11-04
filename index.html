@@ -886,7 +886,7 @@ Content-Type: application/json
         <span class="s2">"rating"</span>:5,
         <span class="s2">"badge"</span>:<span class="s2">"Redeem Now"</span>,
         <span class="s2">"cover-photo-url"</span>:<span class="s2">"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"</span>
-      <span class="o">}</span>,
+      <span class="o">}</span>
       <span class="o">{</span>
         <span class="s2">"name"</span>:<span class="s2">"Stay in 1-Bedroom Suite for Up to 4 Guests"</span>,
         <span class="s2">"merchant-name"</span>:<span class="s2">"Crosswind Resort Suites"</span>,
@@ -937,7 +937,7 @@ Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
-<h4 id="deal-found">Deal Found</h4>
+<h4 id="single-branch-deal-without-pickers">Single Branch Deal Without Pickers</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
 Content-Type: application/json
@@ -970,22 +970,215 @@ Content-Type: application/json
           <span class="s2">"+63 2 432 8579"</span>,
           <span class="s2">"+63 2 573 8456"</span>
         <span class="o">]</span>,
-        <span class="s2">"options"</span>:[
+        <span class="s2">"variants"</span>:[
           <span class="o">{</span>
-            <span class="s2">"name"</span>:<span class="s2">"Schedule"</span>,
-            <span class="s2">"key"</span>:<span class="s2">"Schedule"</span>,
-            <span class="s2">"values"</span>:[
-              <span class="o">{</span>
-                <span class="s2">"name"</span>:<span class="s2">"Morning"</span>,
-                <span class="s2">"key"</span>:<span class="s2">"Morning"</span>,
-                <span class="s2">"available"</span>:3
-              <span class="o">}</span>,
-              <span class="o">{</span>
-                <span class="s2">"name"</span>:<span class="s2">"Evening"</span>,
-                <span class="s2">"key"</span>:<span class="s2">"Evening"</span>,
-                <span class="s2">"available"</span>:2
-              <span class="o">}</span>
-            <span class="o">]</span>
+            <span class="s2">"id"</span>: <span class="s2">"55ffed3869702d1df8920100"</span>
+            <span class="s2">"properties"</span>: <span class="o">{}</span>,
+            <span class="s2">"available"</span>: 15
+          <span class="o">}</span>
+        <span class="o">]</span>
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h4 id="single-branch-deal-with-pickers">Single Branch Deal With Pickers</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>:<span class="o">{</span>
+    <span class="s2">"name"</span>:<span class="s2">"Stay in 1-Bedroom Suite for Up to 4 Guests"</span>,
+    <span class="s2">"merchant-name"</span>:<span class="s2">"Crosswind Resort Suites"</span>,
+    <span class="s2">"discount-price"</span>:<span class="s2">"P3600"</span>,
+    <span class="s2">"original-price"</span>:<span class="s2">"P4500"</span>,
+    <span class="s2">"installment-price"</span>:<span class="s2">"P18678"</span>,
+    <span class="s2">"available"</span>:5,
+    <span class="s2">"rating"</span>:5,
+    <span class="s2">"badge"</span>:<span class="s2">"Redeem Now"</span>,
+    <span class="s2">"gist"</span>:<span class="s2">"San Juan is Manila's smallest city in terms of distance. Despite of this, it is slowly becoming recognized as a mecca for foodies. What started out as a myriad of Chinese restaurants eventually evolved to a melting pot of different cuisines, catering to nearly every craving in existence."</span>,
+    <span class="s2">"terms"</span>:<span class="s2">"Valid for Friday, Saturday, or Sunday check-ins from August 22, 2015 to December 27, 2015. Subject to availability."</span>,
+    <span class="s2">"cover-photo-url"</span>:<span class="s2">"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"</span>,
+    <span class="s2">"carousel-photo-urls"</span>:[
+      <span class="s2">"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"</span>,
+      <span class="s2">"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"</span>
+    <span class="o">]</span>,
+    <span class="s2">"branches"</span>:[
+      <span class="o">{</span>
+        <span class="s2">"id"</span>:<span class="s2">"540e745169702d79643d0000"</span>,
+        <span class="s2">"name"</span>:<span class="s2">"SM Aura"</span>,
+        <span class="s2">"address"</span>:<span class="s2">"Level 4, Food on Four area, BGC, Taguig"</span>,
+        <span class="s2">"latitude"</span>:<span class="s2">"3248235789"</span>,
+        <span class="s2">"longitude"</span>:<span class="s2">"432563278"</span>,
+        <span class="s2">"phone-numbers"</span>:[
+          <span class="s2">"+63 2 432 8579"</span>,
+          <span class="s2">"+63 2 573 8456"</span>
+        <span class="o">]</span>,
+        <span class="s2">"variants"</span>:[
+          <span class="o">{</span>
+            <span class="s2">"id"</span>: <span class="s2">"55ffed3869702d1df8920100"</span>
+            <span class="s2">"properties"</span>: <span class="o">{</span>
+              <span class="s2">"Schedule"</span>: <span class="s2">"Morning"</span>
+            <span class="o">}</span>,
+            <span class="s2">"available"</span>: 15
+          <span class="o">}</span>,
+          <span class="o">{</span>
+            <span class="s2">"id"</span>: <span class="s2">"55ffed3869702d1df8920100"</span>
+            <span class="s2">"properties"</span>: <span class="o">{</span>
+              <span class="s2">"Schedule"</span>: <span class="s2">"Afternoon"</span>
+            <span class="o">}</span>,
+            <span class="s2">"available"</span>: 18
+          <span class="o">}</span>
+        <span class="o">]</span>
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h4 id="multiple-branch-deal-without-pickers">Multiple Branch Deal Without Pickers</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>:<span class="o">{</span>
+    <span class="s2">"name"</span>:<span class="s2">"Stay in 1-Bedroom Suite for Up to 4 Guests"</span>,
+    <span class="s2">"merchant-name"</span>:<span class="s2">"Crosswind Resort Suites"</span>,
+    <span class="s2">"discount-price"</span>:<span class="s2">"P3600"</span>,
+    <span class="s2">"original-price"</span>:<span class="s2">"P4500"</span>,
+    <span class="s2">"installment-price"</span>:<span class="s2">"P18678"</span>,
+    <span class="s2">"available"</span>:5,
+    <span class="s2">"rating"</span>:5,
+    <span class="s2">"badge"</span>:<span class="s2">"Redeem Now"</span>,
+    <span class="s2">"gist"</span>:<span class="s2">"San Juan is Manila's smallest city in terms of distance. Despite of this, it is slowly becoming recognized as a mecca for foodies. What started out as a myriad of Chinese restaurants eventually evolved to a melting pot of different cuisines, catering to nearly every craving in existence."</span>,
+    <span class="s2">"terms"</span>:<span class="s2">"Valid for Friday, Saturday, or Sunday check-ins from August 22, 2015 to December 27, 2015. Subject to availability."</span>,
+    <span class="s2">"cover-photo-url"</span>:<span class="s2">"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"</span>,
+    <span class="s2">"carousel-photo-urls"</span>:[
+      <span class="s2">"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"</span>,
+      <span class="s2">"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"</span>
+    <span class="o">]</span>,
+    <span class="s2">"branches"</span>:[
+      <span class="o">{</span>
+        <span class="s2">"id"</span>:<span class="s2">"540e745169702d79643d0000"</span>,
+        <span class="s2">"name"</span>:<span class="s2">"Makati"</span>,
+        <span class="s2">"address"</span>:<span class="s2">"Ground Level, Somerset Olympia, Makati Ave. cor. Sto. Tomas St., Makati City"</span>,
+        <span class="s2">"latitude"</span>:<span class="s2">"3248235789"</span>,
+        <span class="s2">"longitude"</span>:<span class="s2">"432563278"</span>,
+        <span class="s2">"phone-numbers"</span>:[
+          <span class="s2">"+63 2 432 8579"</span>,
+          <span class="s2">"+63 2 573 8456"</span>
+        <span class="o">]</span>,
+        <span class="s2">"variants"</span>:[
+          <span class="o">{</span>
+            <span class="s2">"id"</span>: <span class="s2">"55ffed3869702d1df8920100"</span>
+            <span class="s2">"properties"</span>: <span class="o">{}</span>,
+            <span class="s2">"available"</span>: 15
+          <span class="o">}</span>
+        <span class="o">]</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+        <span class="s2">"id"</span>:<span class="s2">"540e745169702d79643d0000"</span>,
+        <span class="s2">"name"</span>:<span class="s2">"SM Megamall"</span>,
+        <span class="s2">"address"</span>:<span class="s2">"2nd Floor (near Cotton On &amp; Toby's Sports Shop), Bldg. A, Mandaluyong"</span>,
+        <span class="s2">"latitude"</span>:<span class="s2">"3248235789"</span>,
+        <span class="s2">"longitude"</span>:<span class="s2">"432563278"</span>,
+        <span class="s2">"phone-numbers"</span>:[
+          <span class="s2">"+63 2 432 8579"</span>,
+          <span class="s2">"+63 2 573 8456"</span>
+        <span class="o">]</span>,
+        <span class="s2">"variants"</span>:[
+          <span class="o">{</span>
+            <span class="s2">"id"</span>: <span class="s2">"55ffed3869702d1df8920100"</span>
+            <span class="s2">"properties"</span>: <span class="o">{}</span>
+            <span class="s2">"available"</span>: 18
+          <span class="o">}</span>
+        <span class="o">]</span>
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h4 id="multiple-branch-deal-with-pickers">Multiple Branch Deal With Pickers</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>:<span class="o">{</span>
+    <span class="s2">"name"</span>:<span class="s2">"Stay in 1-Bedroom Suite for Up to 4 Guests"</span>,
+    <span class="s2">"merchant-name"</span>:<span class="s2">"Crosswind Resort Suites"</span>,
+    <span class="s2">"discount-price"</span>:<span class="s2">"P3600"</span>,
+    <span class="s2">"original-price"</span>:<span class="s2">"P4500"</span>,
+    <span class="s2">"installment-price"</span>:<span class="s2">"P18678"</span>,
+    <span class="s2">"available"</span>:5,
+    <span class="s2">"rating"</span>:5,
+    <span class="s2">"badge"</span>:<span class="s2">"Redeem Now"</span>,
+    <span class="s2">"gist"</span>:<span class="s2">"San Juan is Manila's smallest city in terms of distance. Despite of this, it is slowly becoming recognized as a mecca for foodies. What started out as a myriad of Chinese restaurants eventually evolved to a melting pot of different cuisines, catering to nearly every craving in existence."</span>,
+    <span class="s2">"terms"</span>:<span class="s2">"Valid for Friday, Saturday, or Sunday check-ins from August 22, 2015 to December 27, 2015. Subject to availability."</span>,
+    <span class="s2">"cover-photo-url"</span>:<span class="s2">"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"</span>,
+    <span class="s2">"carousel-photo-urls"</span>:[
+      <span class="s2">"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"</span>,
+      <span class="s2">"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"</span>
+    <span class="o">]</span>,
+    <span class="s2">"branches"</span>:[
+      <span class="o">{</span>
+        <span class="s2">"id"</span>:<span class="s2">"540e745169702d79643d0000"</span>,
+        <span class="s2">"name"</span>:<span class="s2">"SM Aura"</span>,
+        <span class="s2">"address"</span>:<span class="s2">"Level 4, Food on Four area, BGC, Taguig"</span>,
+        <span class="s2">"latitude"</span>:<span class="s2">"3248235789"</span>,
+        <span class="s2">"longitude"</span>:<span class="s2">"432563278"</span>,
+        <span class="s2">"phone-numbers"</span>:[
+          <span class="s2">"+63 2 432 8579"</span>,
+          <span class="s2">"+63 2 573 8456"</span>
+        <span class="o">]</span>,
+        <span class="s2">"variants"</span>:[
+          <span class="o">{</span>
+            <span class="s2">"id"</span>: <span class="s2">"55ffed3869702d1df8920100"</span>
+            <span class="s2">"properties"</span>: <span class="o">{</span>
+              <span class="s2">"Schedule"</span>: <span class="s2">"Morning"</span>
+            <span class="o">}</span>,
+            <span class="s2">"available"</span>: 15
+          <span class="o">}</span>,
+          <span class="o">{</span>
+            <span class="s2">"id"</span>: <span class="s2">"55ffed3869702d1df8920100"</span>
+            <span class="s2">"properties"</span>: <span class="o">{</span>
+              <span class="s2">"Schedule"</span>: <span class="s2">"Afternoon"</span>
+            <span class="o">}</span>,
+            <span class="s2">"available"</span>: 18
+          <span class="o">}</span>
+        <span class="o">]</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+        <span class="s2">"id"</span>:<span class="s2">"540e745169702d79643d0000"</span>,
+        <span class="s2">"name"</span>:<span class="s2">"SM Megamall"</span>,
+        <span class="s2">"address"</span>:<span class="s2">"2nd Floor (near Cotton On &amp; Toby's Sports Shop), Bldg. A, Mandaluyong"</span>,
+        <span class="s2">"latitude"</span>:<span class="s2">"3248235789"</span>,
+        <span class="s2">"longitude"</span>:<span class="s2">"432563278"</span>,
+        <span class="s2">"phone-numbers"</span>:[
+          <span class="s2">"+63 2 432 8579"</span>,
+          <span class="s2">"+63 2 573 8456"</span>
+        <span class="o">]</span>,
+        <span class="s2">"variants"</span>:[
+          <span class="o">{</span>
+            <span class="s2">"id"</span>: <span class="s2">"55ffed3869702d1df8920100"</span>
+            <span class="s2">"properties"</span>: <span class="o">{</span>
+              <span class="s2">"Schedule"</span>: <span class="s2">"Morning"</span>
+            <span class="o">}</span>,
+            <span class="s2">"available"</span>: 15
+          <span class="o">}</span>,
+          <span class="o">{</span>
+            <span class="s2">"id"</span>: <span class="s2">"55ffed3869702d1df8920100"</span>
+            <span class="s2">"properties"</span>: <span class="o">{</span>
+              <span class="s2">"Schedule"</span>: <span class="s2">"Afternoon"</span>
+            <span class="o">}</span>,
+            <span class="s2">"available"</span>: 18
           <span class="o">}</span>
         <span class="o">]</span>
       <span class="o">}</span>
