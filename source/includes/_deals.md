@@ -20,54 +20,214 @@ Content-Type: application/json
   "data":{
     "location":{
       "name":"Makati",
+      "key":"makati",
       "merchant-names":[
-        "Crosswinds Resort Suites",
-        "Utopia Resort & Spa",
-        "Mandala Spa & Villas",
-        "The Manor at Camp John Hay"
+        "Dillingers 1903 Steak-Brew",
+        "Kafe Batwan by Sarsa",
+        "Sugarleaf Makati"
       ]
     },
-    "deals":[
+    "collections":[
       {
-        "name":"Stay in 1-Bedroom Suite for Up to 4 Guests",
-        "merchant-name":"Crosswind Resort Suites",
-        "discount-price":"₱3,600",
-        "original-price":"₱4,500",
-        "available":5,
-        "location-names":[
-          "Makati",
-          "Tagaytay"
-        ],
-        "rating":5,
-        "badge":"Redeem Now",
-        "cover-photo-url":"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"
+        "name":"Dining",
+        "key":"dining"
       },
       {
-        "name":"Sampaguita Duplex Suite for 2 with Breakfast and Massage",
-        "merchant-name":"Utopia Resort & Spa",
-        "discount-price":"₱7,500",
-        "original-price":"₱8,990",
-        "available":5,
+        "name":"Getaways",
+        "key":"getaways"
+      },
+      {
+        "name":"Hotels",
+        "key":"hotels"
+      },
+      {
+        "name":"Beauty & Fitness",
+        "key":"beauty"
+      },
+      {
+        "name":"Experiences",
+        "key":"experiences"
+      },
+      {
+        "name":"Our Fresh Picks",
+        "key":"new"
+      }
+    ],
+    "deals":[
+      {
+        "id":"56276e9269702d3c6d970000",
+        "name":"Greeka Kouzina Feast: Choose Your Own 3-Course Meal for 2",
+        "merchant-name":"Greeka Kouzina",
+        "discount-price":"₱1,100.00",
+        "original-price":"₱1,650.00",
+        "available":10,
+        "location-names":[
+          "Pasig",
+          "Quezon City",
+          "San Juan"
+        ],
+        "rating":null,
+        "badge":"Redeem Now",
+        "cover-photo-url":"https://dxjamgtjhgl48.cloudfront.net/uploads/cover_photo/image/5629cd9d69702d5de1190000/cover-2015-10-23.jpg"
+      },
+      {
+        "id":"561c5de469702d7789830000",
+        "name":"Taiwanese All-You-Can-Eat Hot Pot (Valid Daily)",
+        "merchant-name":"Huat Pot",
+        "discount-price":"₱599.00",
+        "original-price":"₱750.00",
+        "available":53,
+        "location-names":[
+          "San Juan"
+        ],
+        "rating":3.909090909090909,
+        "badge":"Redeem Now",
+        "cover-photo-url":"https://dxjamgtjhgl48.cloudfront.net/uploads/cover_photo/image/561df87b69702d2ee2d40000/cover-2015-10-14.jpg"
+      },
+      {
+        "id":"56120af469702d4d380e0000",
+        "name":"P500 Worth of American Comfort Food & Drinks at Dillingers ",
+        "merchant-name":"Dillingers 1903 Steak-Brew",
+        "discount-price":"₱295.00",
+        "original-price":"₱500.00",
+        "available":16,
         "location-names":[
           "Makati"
         ],
+        "rating":4.333333333333333,
+        "badge":"Redeem Now",
+        "cover-photo-url":"https://dxjamgtjhgl48.cloudfront.net/uploads/cover_photo/image/561769e869702d2ee21f0000/cover-2015-10-09.jpg"
+      },
+      {
+        "id":"5630927a69702d4a97700000",
+        "name":"P500 Worth of Filipino Delicacies & Drinks ",
+        "merchant-name":"Kafe Batwan by Sarsa",
+        "discount-price":"₱350.00",
+        "original-price":"₱500.00",
+        "available":31,
+        "location-names":[
+          "Makati"
+        ],
+        "rating":null,
+        "badge":"Redeem Now",
+        "cover-photo-url":"https://dxjamgtjhgl48.cloudfront.net/uploads/cover_photo/image/5630927a69702d4a97730000/cover-2015-10-28.jpg"
+      },
+      {
+        "id":"563092e669702d4a9a860000",
+        "name":"P500 Worth of Deliciously Nutritious Food & Drinks at Sugarleaf ",
+        "merchant-name":"Sugarleaf Makati",
+        "discount-price":"₱295.00",
+        "original-price":"₱500.00",
+        "available":11,
+        "location-names":[
+          "Makati"
+        ],
+        "rating":null,
+        "badge":"Redeem Now",
+        "cover-photo-url":"https://dxjamgtjhgl48.cloudfront.net/uploads/cover_photo/image/563092e769702d4a9a8a0000/cover-2015-10-28.jpg"
+      },
+      {
+        "id":"5629b06869702d5de4100000",
+        "name":"P1000 Worth of Your Favorite Comfort Food & More",
+        "merchant-name":"Relik Restaurant and Bar ",
+        "discount-price":"₱500.00",
+        "original-price":"₱1,000.00",
+        "available":6,
+        "location-names":[
+          "Bgc",
+          "Taguig"
+        ],
+        "rating":null,
+        "badge":"Redeem Now",
+        "cover-photo-url":"https://dxjamgtjhgl48.cloudfront.net/uploads/cover_photo/image/562a0b3469702d5de43c0000/cover-2015-10-23.jpg"
+      },
+      {
+        "id":"5627187169702d3c70600000",
+        "name":"Chakra Café's 1-Day 100% Organic Elixir Juice Cleanse ",
+        "merchant-name":"Chakra Café",
+        "discount-price":"₱1,110.00",
+        "original-price":"₱1,575.00",
+        "available":21,
+        "location-names":[
+          "Bgc",
+          "Taguig"
+        ],
         "rating":4,
-        "badge":"₱2,500 / 3-Months",
-        "cover-photo-url":"https://cloudfront.net/fdsjkghdskj/hfkdjhfsdjkg.jpg"
+        "badge":"Redeem Now",
+        "cover-photo-url":"https://dxjamgtjhgl48.cloudfront.net/uploads/cover_photo/image/5628b52469702d4259420100/cover-2015-10-22.jpg"
+      },
+      {
+        "id":"5627195869702d4259b90000",
+        "name":"Chakra Café's 3-Day 100% Organic Elixir Juice Cleanse",
+        "merchant-name":"Chakra Café",
+        "discount-price":"₱3,050.00",
+        "original-price":"₱4,350.00",
+        "available":12,
+        "location-names":[
+          "Bgc",
+          "Taguig"
+        ],
+        "rating":4,
+        "badge":"Redeem Now",
+        "cover-photo-url":"https://dxjamgtjhgl48.cloudfront.net/uploads/cover_photo/image/5628b4d369702d425c290100/cover-2015-10-22.jpg"
+      },
+      {
+        "id":"5627763669702d4259ca0000",
+        "name":"Chic and Elegant Private Party Package for 10 ",
+        "merchant-name":"Back of the House",
+        "discount-price":"₱18,000.00",
+        "original-price":"₱25,000.00",
+        "available":1,
+        "location-names":[
+          "Quezon City"
+        ],
+        "rating":null,
+        "badge":"Redeem Now",
+        "cover-photo-url":"https://dxjamgtjhgl48.cloudfront.net/uploads/cover_photo/image/56292a2b69702d1417240000/cover-2015-10-23.jpg"
+      },
+      {
+        "id":"55ed23e369702d66fe290000",
+        "name":"Weekday Treat: P500 Worth of Famous Shibuya Toast & More ",
+        "merchant-name":"Café Shibuya",
+        "discount-price":"₱300.00",
+        "original-price":"₱500.00",
+        "available":41,
+        "location-names":[
+          "Quezon City"
+        ],
+        "rating":null,
+        "badge":"Redeem Now",
+        "cover-photo-url":"https://dxjamgtjhgl48.cloudfront.net/uploads/cover_photo/image/55f8f2a769702d3446a80000/cover-2015-09-16.jpg"
       }
     ],
     "expiring-coupons":[
       {
-        "notice":"2 Days Left",
-        "deal-name":"Overnight Stay in 1-Bedroom Suite for Up to 4 Guests",
-        "merchant-name":"Crosswinds Resort Suites"
+        "notice":"4 Days Left",
+        "deal-name":"P300 Worth of Food and Drinks at Serenitea ",
+        "merchant-name":"Serenitea"
       },
       {
-        "notice":"1 Day Left",
-        "deal-name":"Arstisanal Whole Cakes For Pick-Up, Valid Daily Including Holidays",
-        "merchant-name":"Holiday Inn & Suites Makati"
+        "notice":"4 Days Left",
+        "deal-name":"P500 Worth of Award-Winning Fare by Chef JP Anglo",
+        "merchant-name":"SARSA Kitchen+Bar"
+      },
+      {
+        "notice":"4 Days Left",
+        "deal-name":"P500 Worth of Award-Winning Fare by Chef JP Anglo",
+        "merchant-name":"SARSA Kitchen+Bar"
+      },
+      {
+        "notice":"7 Days Left",
+        "deal-name":"Early Bird's Lovely Weekday Breakfast Special for 2 ",
+        "merchant-name":"Early Bird Breakfast Club"
       }
-    ]
+    ],
+    "credits":{
+      "balance":"$50.00"
+    },
+    "coupons":{
+      "count":86
+    }
   }
 }
 ```
