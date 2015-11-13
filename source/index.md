@@ -12,6 +12,7 @@ includes:
   - locations
   - collections
   - deals
+  - settings
   - markup
 
 search: true
