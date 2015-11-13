@@ -1368,6 +1368,97 @@ Content-Type: application/json
 </tr>
 </tbody></table>
 
+          <h1 id="settings">Settings</h1>
+
+<h2 id="get">Get</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 GET /v1/settings
+Content-Type: application/json
+Authorization: Bearer :session
+</code></pre>
+
+<blockquote>
+<h4 id="response">Response</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"user"</span>: <span class="o">{</span>
+      <span class="s2">"fullname"</span>: <span class="s2">"John Doe"</span>,
+      <span class="s2">"email"</span>: <span class="s2">"staging@dealgrocer.com"</span>
+    <span class="o">}</span>,
+    <span class="s2">"settings"</span>: <span class="o">{</span>
+      <span class="s2">"notify-expiring-coupons"</span>: <span class="nb">true</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Get user settings.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+</tbody></table>
+
+<h2 id="update">Update</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 PATCH /v1/settings
+Content-Type: application/json
+Authorization: Bearer :session
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"notify-expiring-coupons"</span>: notify-expiring-coupons
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h4 id="response">Response</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+</code></pre>
+
+<p>Update user settings.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+<tr>
+<td>notify-expiring-coupons</td>
+<td>false</td>
+<td>true</td>
+</tr>
+</tbody></table>
+
           <h1 id="markup">Markup</h1>
 
 <h2 id="markdown">Markdown</h2>
