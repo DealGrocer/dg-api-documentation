@@ -12,6 +12,7 @@ includes:
   - locations
   - collections
   - deals
+  - orders
   - settings
   - markup
 
