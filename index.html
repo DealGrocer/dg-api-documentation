@@ -1699,6 +1699,53 @@ Content-Type: application/json
 </tr>
 </tbody></table>
 
+<h2 id="delete-entry">Delete Entry</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 DELETE /platform/v1/order/entries/:entry
+Content-Type: application/json
+Authorization: Bearer :session
+</code></pre>
+
+<blockquote>
+<h4 id="response">Response</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"entry"</span>: <span class="o">{</span>
+    <span class="s2">"id"</span>: <span class="s2">"565253043edf8c434b000014"</span>
+  <span class="o">}</span>,
+  <span class="s2">"order"</span>: <span class="o">{</span>
+    <span class="s2">"branches"</span>: <span class="o">[]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Delete an order entry for the customer.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+<tr>
+<td>entry</td>
+<td>true</td>
+<td>565253043edf8c434b000014</td>
+</tr>
+</tbody></table>
+
           <h1 id="settings">Settings</h1>
 
 <h2 id="get">Get</h2>
