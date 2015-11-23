@@ -457,7 +457,7 @@ lastname | true | Dela Cruz
 > #### Request
 
 ```shell
-HTTP/1.1 POST /platform/v1/order/entries/:entry
+HTTP/1.1 PATCH /platform/v1/order/entries/:entry
 Content-Type: application/json
 Authorization: Bearer :session
 
