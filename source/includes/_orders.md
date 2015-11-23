@@ -270,3 +270,38 @@ variant-id | true | 56276e9269702d3c6d980000
 quantity | true | 5
 firstname | true | Juan
 lastname | true | Dela Cruz
+
+
+
+## Delete Entry
+
+> #### Request
+
+```shell
+HTTP/1.1 DELETE /platform/v1/order/entries/:entry
+Content-Type: application/json
+Authorization: Bearer :session
+```
+
+> #### Response
+
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "entry": {
+    "id": "565253043edf8c434b000014"
+  },
+  "order": {
+    "branches": []
+  }
+}
+```
+
+Delete an order entry for the customer.
+
+Parameter | Required | Sample
+--- | --- | ---
+session | true | 561b671b4f72695642000000
+entry | true | 565253043edf8c434b000014
