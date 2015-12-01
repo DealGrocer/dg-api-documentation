@@ -153,7 +153,7 @@ product | true | 56276e9269702d3c6d970000
 
 
 
-## Update Order Entries by Branch
+## Save Order Entries by Branch
 
 > #### Request
 
@@ -231,7 +231,7 @@ Content-Type: application/json
 }
 ```
 
-Get order entries by branch.
+Save order entries by branch.
 
 Parameter | Required | Sample
 --- | --- | ---
