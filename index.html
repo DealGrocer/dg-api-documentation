@@ -1590,7 +1590,7 @@ Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
-<h4 id="response">Response</h4>
+<h4 id="successful-reservation-of-order-entries">Successful Reservation of Order Entries</h4>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
 Content-Type: application/json
@@ -1638,51 +1638,62 @@ Content-Type: application/json
 <span class="o">}</span>
 </code></pre>
 
-<p>Save order entries by branch.</p>
+<blockquote>
+<h4 id="insufficient-stocks-available">Insufficient Stocks Available</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 400 OK
+Content-Type: application/json
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Sample</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>session</td>
-<td>true</td>
-<td>561b671b4f72695642000000</td>
-</tr>
-<tr>
-<td>branch</td>
-<td>true</td>
-<td>56273ab169702d425ca20000</td>
-</tr>
-<tr>
-<td>product</td>
-<td>true</td>
-<td>56276e9269702d3c6d970000</td>
-</tr>
-<tr>
-<td>variant</td>
-<td>true</td>
-<td>56276e9269702d3c6d980000</td>
-</tr>
-<tr>
-<td>quantity</td>
-<td>true</td>
-<td>1</td>
-</tr>
-<tr>
-<td>recipient-firstname</td>
-<td>true</td>
-<td>John</td>
-</tr>
-<tr>
-<td>recipient-lastname</td>
-<td>true</td>
-<td>Doe</td>
-</tr>
-</tbody></table>
+<span class="o">{</span>
+  <span class="s2">"errors"</span>: <span class="o">{</span>
+    <span class="s2">"message"</span>: <span class="s2">"Uh oh, someone beat you to it. Please select a lower quantity."</span>
+  <span class="o">}</span>,
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"branch"</span>: <span class="o">{</span>
+      <span class="s2">"id"</span>: <span class="s2">"56273ab169702d425ca20000"</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Banawe"</span>
+    <span class="o">}</span>,
+    <span class="s2">"product"</span>: <span class="o">{</span>
+      <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d970000"</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Greeka Kouzina Feast: Choose Your Own 3-Course Meal for 2"</span>
+    <span class="o">}</span>,
+    <span class="s2">"variants"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d980000"</span>,
+        <span class="s2">"remaining"</span>: 6,
+        <span class="s2">"properties"</span>: <span class="o">{}</span>
+      <span class="o">}</span>
+    <span class="o">]</span>,
+    <span class="s2">"for-myself"</span>: <span class="o">{}</span>,
+    <span class="s2">"for-someone"</span>: <span class="o">[]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h4 id="deal-no-longer-available">Deal No Longer Available</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 404 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"errors"</span>: <span class="o">{</span>
+    <span class="s2">"message"</span>: <span class="s2">"Uh oh, this deal is no longer available."</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+Save order entries by branch.
+
+Parameter | Required | Sample
+--- | --- | ---
+session | <span class="nb">true</span> | 561b671b4f72695642000000
+branch | <span class="nb">true</span> | 56273ab169702d425ca20000
+product | <span class="nb">true</span> | 56276e9269702d3c6d970000
+variant | <span class="nb">true</span> | 56276e9269702d3c6d980000
+quantity | <span class="nb">true</span> | 1
+recipient-firstname | <span class="nb">true</span> | John
+recipient-lastname | <span class="nb">true</span> | Doe
+</code></pre>
 
           <h1 id="settings">Settings</h1>
 
