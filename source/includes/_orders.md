@@ -182,7 +182,7 @@ Authorization: Bearer :session
 }
 ```
 
-> #### Response
+> #### Successful Reservation of Order Entries
 
 ```shell
 HTTP/1.1 200 OK
@@ -230,6 +230,50 @@ Content-Type: application/json
   }
 }
 ```
+
+> #### Insufficient Stocks Available
+
+```shell
+HTTP/1.1 400 OK
+Content-Type: application/json
+
+{
+  "errors": {
+    "message": "Uh oh, someone beat you to it. Please select a lower quantity."
+  },
+  "data": {
+    "branch": {
+      "id": "56273ab169702d425ca20000",
+      "name": "Banawe"
+    },
+    "product": {
+      "id": "56276e9269702d3c6d970000",
+      "name": "Greeka Kouzina Feast: Choose Your Own 3-Course Meal for 2"
+    },
+    "variants": [
+      {
+        "id": "56276e9269702d3c6d980000",
+        "remaining": 6,
+        "properties": {}
+      }
+    ],
+    "for-myself": {},
+    "for-someone": []
+  }
+}
+```
+
+> #### Deal No Longer Available
+
+```shell
+HTTP/1.1 404 OK
+Content-Type: application/json
+
+{
+  "errors": {
+    "message": "Uh oh, this deal is no longer available."
+  }
+}
 
 Save order entries by branch.
 
