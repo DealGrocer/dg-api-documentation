@@ -16,6 +16,7 @@ includes:
   - settings
   - tokens
   - cards
+  - checkouts
   - markup
 
 search: true
