@@ -100,4 +100,3 @@ Parameter | Required | Sample
 --- | --- | ---
 session | true | 561b671b4f72695642000000
 token | true | 8hmr52
-
