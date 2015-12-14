@@ -1964,6 +1964,336 @@ Content-Type: application/json
 </tr>
 </tbody></table>
 
+          <h1 id="checkouts">Checkouts</h1>
+
+<h2 id="summary">Summary</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 GET /v1/checkout
+Content-Type: application/json
+Authorization: Bearer :session
+</code></pre>
+
+<blockquote>
+<h4 id="response">Response</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"checkout"</span>: <span class="o">{</span>
+      <span class="s2">"can-complete"</span>: <span class="nb">false</span>,
+      <span class="s2">"total-php"</span>: <span class="s2">"₱23,960.00"</span>,
+      <span class="s2">"balance-php"</span>: <span class="s2">"₱23,960.00"</span>
+    <span class="o">}</span>,
+    <span class="s2">"credits"</span>: <span class="o">{</span>
+      <span class="s2">"total-usd"</span>: <span class="s2">"</span><span class="nv">$50</span><span class="s2">.00"</span>,
+      <span class="s2">"in-use"</span>: <span class="nb">false</span>,
+      <span class="s2">"in-use-usd"</span>: <span class="s2">"</span><span class="nv">$0</span><span class="s2">.00"</span>,
+      <span class="s2">"balance-usd"</span>: <span class="s2">"</span><span class="nv">$50</span><span class="s2">.00"</span>
+    <span class="o">}</span>,
+    <span class="s2">"cards"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"token"</span>: <span class="s2">"8hmr52"</span>,
+        <span class="s2">"type"</span>: <span class="s2">"American Express"</span>,
+        <span class="s2">"expiry-month"</span>: <span class="s2">"12"</span>,
+        <span class="s2">"expiry-year"</span>: <span class="s2">"2020"</span>,
+        <span class="s2">"card-number-last-4"</span>: <span class="s2">"0005"</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+        <span class="s2">"token"</span>: <span class="s2">"3kbnhw"</span>,
+        <span class="s2">"type"</span>: <span class="s2">"Visa"</span>,
+        <span class="s2">"expiry-month"</span>: <span class="s2">"12"</span>,
+        <span class="s2">"expiry-year"</span>: <span class="s2">"2020"</span>,
+        <span class="s2">"card-number-last-4"</span>: <span class="s2">"7777"</span>
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Get checkout summary.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+</tbody></table>
+
+<h2 id="turn-on-usage-of-prepaid-credits">Turn On Usage of Prepaid Credits</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 POST /v1/checkout/prepayment
+Content-Type: application/json
+Authorization: Bearer :session
+</code></pre>
+
+<blockquote>
+<h4 id="response">Response</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"checkout"</span>: <span class="o">{</span>
+      <span class="s2">"can-complete"</span>: <span class="nb">false</span>,
+      <span class="s2">"total-php"</span>: <span class="s2">"₱23,960.00"</span>,
+      <span class="s2">"balance-php"</span>: <span class="s2">"₱21,521.54"</span>
+    <span class="o">}</span>,
+    <span class="s2">"credits"</span>: <span class="o">{</span>
+      <span class="s2">"total-usd"</span>: <span class="s2">"</span><span class="nv">$50</span><span class="s2">.00"</span>,
+      <span class="s2">"in-use"</span>: <span class="nb">true</span>,
+      <span class="s2">"in-use-usd"</span>: <span class="s2">"</span><span class="nv">$50</span><span class="s2">.00"</span>,
+      <span class="s2">"balance-usd"</span>: <span class="s2">"</span><span class="nv">$0</span><span class="s2">.00"</span>
+    <span class="o">}</span>,
+    <span class="s2">"cards"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"token"</span>: <span class="s2">"8hmr52"</span>,
+        <span class="s2">"type"</span>: <span class="s2">"American Express"</span>,
+        <span class="s2">"expiry-month"</span>: <span class="s2">"12"</span>,
+        <span class="s2">"expiry-year"</span>: <span class="s2">"2020"</span>,
+        <span class="s2">"card-number-last-4"</span>: <span class="s2">"0005"</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+        <span class="s2">"token"</span>: <span class="s2">"3kbnhw"</span>,
+        <span class="s2">"type"</span>: <span class="s2">"Visa"</span>,
+        <span class="s2">"expiry-month"</span>: <span class="s2">"12"</span>,
+        <span class="s2">"expiry-year"</span>: <span class="s2">"2020"</span>,
+        <span class="s2">"card-number-last-4"</span>: <span class="s2">"7777"</span>
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Turn on usage of prepaid credits.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+</tbody></table>
+
+<h2 id="turn-off-usage-of-prepaid-credits">Turn Off Usage of Prepaid Credits</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 DELETE /v1/checkout/prepayment
+Content-Type: application/json
+Authorization: Bearer :session
+</code></pre>
+
+<blockquote>
+<h4 id="response">Response</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"checkout"</span>: <span class="o">{</span>
+      <span class="s2">"can-complete"</span>: <span class="nb">false</span>,
+      <span class="s2">"total-php"</span>: <span class="s2">"₱23,960.00"</span>,
+      <span class="s2">"balance-php"</span>: <span class="s2">"₱23,960.00"</span>
+    <span class="o">}</span>,
+    <span class="s2">"credits"</span>: <span class="o">{</span>
+      <span class="s2">"total-usd"</span>: <span class="s2">"</span><span class="nv">$50</span><span class="s2">.00"</span>,
+      <span class="s2">"in-use"</span>: <span class="nb">false</span>,
+      <span class="s2">"in-use-usd"</span>: <span class="s2">"</span><span class="nv">$0</span><span class="s2">.00"</span>,
+      <span class="s2">"balance-usd"</span>: <span class="s2">"</span><span class="nv">$50</span><span class="s2">.00"</span>
+    <span class="o">}</span>,
+    <span class="s2">"cards"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"token"</span>: <span class="s2">"8hmr52"</span>,
+        <span class="s2">"type"</span>: <span class="s2">"American Express"</span>,
+        <span class="s2">"expiry-month"</span>: <span class="s2">"12"</span>,
+        <span class="s2">"expiry-year"</span>: <span class="s2">"2020"</span>,
+        <span class="s2">"card-number-last-4"</span>: <span class="s2">"0005"</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+        <span class="s2">"token"</span>: <span class="s2">"3kbnhw"</span>,
+        <span class="s2">"type"</span>: <span class="s2">"Visa"</span>,
+        <span class="s2">"expiry-month"</span>: <span class="s2">"12"</span>,
+        <span class="s2">"expiry-year"</span>: <span class="s2">"2020"</span>,
+        <span class="s2">"card-number-last-4"</span>: <span class="s2">"7777"</span>
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Turn off usage of prepaid credits.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+</tbody></table>
+
+<h2 id="checkout-using-prepaid-credits">Checkout Using Prepaid Credits</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 POST /v1/checkout/prepaid
+Content-Type: application/json
+Authorization: Bearer :session
+</code></pre>
+
+<blockquote>
+<h4 id="success">Success</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"deals"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"name"</span>: <span class="s2">"1 Pint of Merry Moo Ice Cream (For Pick-Up) "</span>,
+      <span class="s2">"merchant-name"</span>: <span class="s2">"Merry Moo"</span>,
+      <span class="s2">"end-of-redemption"</span>: <span class="s2">"2016-11-30"</span>,
+      <span class="s2">"redeemability"</span>: <span class="s2">"352 DAYS LEFT"</span>,
+      <span class="s2">"coupons"</span>: <span class="s2">"2 COUPONS"</span>
+    <span class="o">}</span>
+  <span class="o">]</span>,
+  <span class="s2">"checkout"</span>: <span class="o">{</span>
+    <span class="s2">"total-amount-php"</span>: <span class="s2">"₱440.00"</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h4 id="failure">Failure</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"errors"</span>: <span class="o">{</span>
+    <span class="s2">"message"</span>: <span class="s2">"There was a problem processing your payment. Please try again."</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Checkout using prepaid credits.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+</tbody></table>
+
+<h2 id="checkout-using-credit-cards">Checkout Using Credit Cards</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 POST /v1/checkout/card
+Content-Type: application/json
+Authorization: Bearer :session
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"token"</span>: token
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h4 id="success">Success</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"deals"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"name"</span>: <span class="s2">"1 Pint of Merry Moo Ice Cream (For Pick-Up) "</span>,
+      <span class="s2">"merchant-name"</span>: <span class="s2">"Merry Moo"</span>,
+      <span class="s2">"end-of-redemption"</span>: <span class="s2">"2016-11-30"</span>,
+      <span class="s2">"redeemability"</span>: <span class="s2">"352 DAYS LEFT"</span>,
+      <span class="s2">"coupons"</span>: <span class="s2">"2 COUPONS"</span>
+    <span class="o">}</span>
+  <span class="o">]</span>,
+  <span class="s2">"checkout"</span>: <span class="o">{</span>
+    <span class="s2">"total-amount-php"</span>: <span class="s2">"₱440.00"</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h4 id="failure">Failure</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"errors"</span>: <span class="o">{</span>
+    <span class="s2">"message"</span>: <span class="s2">"Your bank did not authorize this transaction. Please contact your bank for further details."</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Checkout using credit cards.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+<tr>
+<td>token</td>
+<td>true</td>
+<td>3kbnhw</td>
+</tr>
+</tbody></table>
+
           <h1 id="markup">Markup</h1>
 
 <h2 id="markdown">Markdown</h2>
