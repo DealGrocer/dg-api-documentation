@@ -14,6 +14,7 @@ includes:
   - deals
   - orders
   - settings
+  - cards
   - markup
 
 search: true
