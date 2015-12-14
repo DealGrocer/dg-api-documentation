@@ -82,15 +82,9 @@ nonce | true |
 > #### Request
 
 ```shell
-HTTP/1.1 POST /v1/cards
+HTTP/1.1 DELETE /v1/cards/:card
 Content-Type: application/json
 Authorization: Bearer :session
-
-{
-  "data": {
-    "token": token
-  }
-}
 ```
 
 > #### Response
