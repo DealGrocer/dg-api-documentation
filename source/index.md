@@ -14,6 +14,7 @@ includes:
   - deals
   - orders
   - settings
+  - tokens
   - cards
   - markup
 
