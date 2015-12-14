@@ -1786,6 +1786,149 @@ Content-Type: application/json
 </tr>
 </tbody></table>
 
+          <h1 id="cards">Cards</h1>
+
+<h2 id="list">List</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 GET /v1/cards
+Content-Type: application/json
+Authorization: Bearer :session
+</code></pre>
+
+<blockquote>
+<h4 id="response">Response</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"cards"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"token"</span>: <span class="s2">"3kbnhw"</span>,
+        <span class="s2">"type"</span>: <span class="s2">"Visa"</span>,
+        <span class="s2">"expiry-month"</span>: <span class="s2">"12"</span>,
+        <span class="s2">"expiry-year"</span>: <span class="s2">"2020"</span>,
+        <span class="s2">"card-number-last-4"</span>: <span class="s2">"7777"</span>
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Get credit card listing.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+</tbody></table>
+
+<h2 id="add">Add</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 POST /v1/cards
+Content-Type: application/json
+Authorization: Bearer :session
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"nonce"</span>: nonce
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h4 id="response">Response</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"token"</span>: <span class="s2">"8hmr52"</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Add credit card.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+<tr>
+<td>nonce</td>
+<td>true</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="remove">Remove</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 POST /v1/cards
+Content-Type: application/json
+Authorization: Bearer :session
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"token"</span>: token
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h4 id="response">Response</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+</code></pre>
+
+<p>Add credit card.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+<tr>
+<td>token</td>
+<td>true</td>
+<td>8hmr52</td>
+</tr>
+</tbody></table>
+
           <h1 id="markup">Markup</h1>
 
 <h2 id="markdown">Markdown</h2>
