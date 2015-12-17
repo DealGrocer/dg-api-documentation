@@ -1811,7 +1811,7 @@ Content-Type: application/json
 <span class="o">}</span>
 </code></pre>
 
-<p>Get new Braintree token.</p>
+<p>Get a new Braintree token.</p>
 
 <table><thead>
 <tr>
@@ -1826,6 +1826,10 @@ Content-Type: application/json
 <td>561b671b4f72695642000000</td>
 </tr>
 </tbody></table>
+
+<p>Returns a Braintree token required for setting up a Braintree client.</p>
+
+<p><a href="https://developers.braintreepayments.com/start/hello-client/ios/v3">Braintree: Set Up Your Client</a></p>
 
           <h1 id="cards">Cards</h1>
 
@@ -1873,6 +1877,36 @@ Content-Type: application/json
 <td>session</td>
 <td>true</td>
 <td>561b671b4f72695642000000</td>
+</tr>
+</tbody></table>
+
+<p>Credit card details are returned as an array of objects, with the following keys and values:</p>
+
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>token</td>
+<td>Secure token of the credit card. This is the token which needs to be passed to complete a checkout using a credit card.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>The credit card type. Can be Visa or Mastercard.</td>
+</tr>
+<tr>
+<td>expiry-month</td>
+<td>The month of expiry.</td>
+</tr>
+<tr>
+<td>expiry-year</td>
+<td>The year of expiry.</td>
+</tr>
+<tr>
+<td>card-number-last-4</td>
+<td>The last 4 digits of the credit card.</td>
 </tr>
 </tbody></table>
 
@@ -1926,6 +1960,13 @@ Content-Type: application/json
 </tr>
 </tbody></table>
 
+<p>Call this to add a new credit card. A NONCE needs to be acquired from Braintree using the supplied credit card details given by the user. Documentation for acquiring a NONCE can be found below:</p>
+
+<ul>
+<li><a href="https://developers.braintreepayments.com/start/hello-client/ios/v3">Braintree: Set Up Your Client</a></li>
+<li><a href="https://developers.braintreepayments.com/guides/credit-cards/client-side/ios/v3">Braintree: Credit Cards / Client-Side Implementation</a></li>
+</ul>
+
 <h2 id="remove">Remove</h2>
 
 <blockquote>
@@ -1949,7 +1990,7 @@ Authorization: Bearer :session
 Content-Type: application/json
 </code></pre>
 
-<p>Add credit card.</p>
+<p>Remove credit card.</p>
 
 <table><thead>
 <tr>
@@ -1969,6 +2010,8 @@ Content-Type: application/json
 <td>8hmr52</td>
 </tr>
 </tbody></table>
+
+<p>Remove the current user&rsquo;s credit card identified with the supplied TOKEN. Tokens can be retrieved from the listing of credit cards.</p>
 
           <h1 id="checkouts">Checkouts</h1>
 
