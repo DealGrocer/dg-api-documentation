@@ -1881,7 +1881,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /v1/cards
+<pre class="highlight shell"><code>HTTP/1.1 POST /v1/cards/new
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -1931,9 +1931,15 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 DELETE /v1/cards/:card
+<pre class="highlight shell"><code>HTTP/1.1 DELETE /v1/cards/delete
 Content-Type: application/json
 Authorization: Bearer :session
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"token"</span>: <span class="s2">"8hmr52"</span>
+  <span class="o">}</span>
+<span class="o">}</span>
 </code></pre>
 
 <blockquote>
