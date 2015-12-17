@@ -42,7 +42,7 @@ session | true | 561b671b4f72695642000000
 > #### Request
 
 ```shell
-HTTP/1.1 PATCH /v1/settings
+HTTP/1.1 POST /v1/settings
 Content-Type: application/json
 Authorization: Bearer :session
 
