@@ -23,8 +23,12 @@ Content-Type: application/json
 }
 ```
 
-Get new Braintree token.
+Get a new Braintree token.
 
 Parameter | Required | Sample
 --- | --- | ---
 session | true | 561b671b4f72695642000000
+
+Returns a Braintree token required for setting up a Braintree client.
+
+[Braintree: Set Up Your Client] (https://developers.braintreepayments.com/start/hello-client/ios/v3)
