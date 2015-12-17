@@ -44,7 +44,7 @@ session | true | 561b671b4f72695642000000
 > #### Request
 
 ```shell
-HTTP/1.1 POST /v1/cards
+HTTP/1.1 POST /v1/cards/new
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -82,9 +82,15 @@ nonce | true |
 > #### Request
 
 ```shell
-HTTP/1.1 DELETE /v1/cards/:card
+HTTP/1.1 DELETE /v1/cards/delete
 Content-Type: application/json
 Authorization: Bearer :session
+
+{
+  "data": {
+    "token": "8hmr52"
+  }
+}
 ```
 
 > #### Response
