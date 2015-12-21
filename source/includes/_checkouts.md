@@ -62,7 +62,7 @@ session | true | 561b671b4f72695642000000
 > #### Request
 
 ```shell
-HTTP/1.1 POST /v1/checkout/prepayment
+HTTP/1.1 POST /v1/checkout/prepayment/use
 Content-Type: application/json
 Authorization: Bearer :session
 ```
@@ -119,7 +119,7 @@ session | true | 561b671b4f72695642000000
 > #### Request
 
 ```shell
-HTTP/1.1 DELETE /v1/checkout/prepayment
+HTTP/1.1 DELETE /v1/checkout/prepayment/unuse
 Content-Type: application/json
 Authorization: Bearer :session
 ```
