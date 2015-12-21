@@ -203,21 +203,25 @@ Content-Type: application/json
     "expiring-coupons":[
       {
         "notice":"4 Days Left",
+        "deal-id":"55ed23e369702d66fe290000",
         "deal-name":"P300 Worth of Food and Drinks at Serenitea ",
         "merchant-name":"Serenitea"
       },
       {
         "notice":"4 Days Left",
+        "deal-id":"55ed23e369702d66fe290000",
         "deal-name":"P500 Worth of Award-Winning Fare by Chef JP Anglo",
         "merchant-name":"SARSA Kitchen+Bar"
       },
       {
         "notice":"4 Days Left",
+        "deal-id":"55ed23e369702d66fe290000",
         "deal-name":"P500 Worth of Award-Winning Fare by Chef JP Anglo",
         "merchant-name":"SARSA Kitchen+Bar"
       },
       {
         "notice":"7 Days Left",
+        "deal-id":"55ed23e369702d66fe290000",
         "deal-name":"Early Bird's Lovely Weekday Breakfast Special for 2 ",
         "merchant-name":"Early Bird Breakfast Club"
       }
