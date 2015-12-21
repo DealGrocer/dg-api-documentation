@@ -17,6 +17,7 @@ includes:
   - tokens
   - cards
   - checkouts
+  - coupons
   - markup
 
 search: true
