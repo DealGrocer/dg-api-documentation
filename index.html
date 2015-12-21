@@ -2343,6 +2343,142 @@ Content-Type: application/json
 </tr>
 </tbody></table>
 
+          <h1 id="coupons">Coupons</h1>
+
+<h2 id="summary">Summary</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 GET /v1/coupons
+Content-Type: application/json
+Authorization: Bearer :session
+</code></pre>
+
+<blockquote>
+<h4 id="response">Response</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"sections"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"name"</span>: <span class="s2">"ENDING SOON"</span>,
+      <span class="s2">"deals"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+          <span class="s2">"id"</span>: <span class="s2">"5603d92269702d4042800100"</span>,
+          <span class="s2">"name"</span>: <span class="s2">"P500 Worth of Award-Winning Fare by Chef JP Anglo"</span>,
+          <span class="s2">"merchant-name"</span>: <span class="s2">"SARSA Kitchen+Bar"</span>,
+          <span class="s2">"end-of-redemption"</span>: <span class="s2">"2015-12-28"</span>,
+          <span class="s2">"redeemability"</span>: <span class="s2">"7 DAYS LEFT"</span>,
+          <span class="s2">"coupons"</span>: <span class="s2">"1 COUPONS"</span>
+        <span class="o">}</span>
+      <span class="o">]</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"name"</span>: <span class="s2">"REDEEMABLE NOW"</span>,
+      <span class="s2">"deals"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+          <span class="s2">"id"</span>: <span class="s2">"561c6d7f69702d2ee26b0000"</span>,
+          <span class="s2">"name"</span>: <span class="s2">"Weekend Japanese Buffet with Unlimited Iced Tea"</span>,
+          <span class="s2">"merchant-name"</span>: <span class="s2">"Midas Hotel and Casino"</span>,
+          <span class="s2">"end-of-redemption"</span>: <span class="s2">"2016-02-21"</span>,
+          <span class="s2">"redeemability"</span>: <span class="s2">"62 DAYS LEFT"</span>,
+          <span class="s2">"coupons"</span>: <span class="s2">"1 COUPONS"</span>
+        <span class="o">}</span>
+      <span class="o">]</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"name"</span>: <span class="s2">"UPCOMING"</span>,
+      <span class="s2">"deals"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+          <span class="s2">"id"</span>: <span class="s2">"55b7156769702d20c3a70000"</span>,
+          <span class="s2">"name"</span>: <span class="s2">"Early Bird's Lovely Weekday Breakfast Special for 2 "</span>,
+          <span class="s2">"merchant-name"</span>: <span class="s2">"Early Bird Breakfast Club"</span>,
+          <span class="s2">"end-of-redemption"</span>: <span class="s2">"2016-03-21"</span>,
+          <span class="s2">"redeemability"</span>: <span class="s2">"91 DAYS LEFT"</span>,
+          <span class="s2">"coupons"</span>: <span class="s2">"3 COUPONS"</span>
+        <span class="o">}</span>
+      <span class="o">]</span>
+    <span class="o">}</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Get coupon summary.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+</tbody></table>
+
+<h2 id="list-by-deal">List by Deal</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 GET /v1/coupons/:deal
+Content-Type: application/json
+Authorization: Bearer :session
+</code></pre>
+
+<blockquote>
+<h4 id="response">Response</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"deal"</span>: <span class="o">{</span>
+      <span class="s2">"name"</span>: <span class="s2">"P500 Worth of Award-Winning Fare by Chef JP Anglo"</span>,
+      <span class="s2">"merchant-name"</span>: <span class="s2">"SARSA Kitchen+Bar"</span>,
+      <span class="s2">"terms"</span>: <span class="s2">"- One (1) coupon is valid for Php500 Worth of Food (NOT valid for drinks and for retail items).</span><span class="se">\r\n</span><span class="s2">- Redeemable Mondays to Fridays only from October 14, 2015 to November 16, 2015 excluding declared holidays.</span><span class="se">\r\n</span><span class="s2">- Valid at SARSA Kitchen+Bar The Fort, Makati or SM Mall of Asia branch. Branch chosen during purchase is FINAL and CANNOT be changed afterwards.</span><span class="se">\r\n</span><span class="s2">- Valid for dine-in only. Not valid for takeout and delivery. Maximum of 2 coupons per table, per visit (regardless if under 1 name or different names). No splitting of bills allowed.</span><span class="se">\r\n</span><span class="s2">- Reservations are required 24 hours in advance. Subject to seat availability. Reserve early: SARSA Kitchen+Bar will strictly honor 20 coupons per day to ensure high quality of service. To aid in redemption, please let them know that you have a Deal Grocer coupon.</span><span class="se">\r\n</span><span class="s2">- Coupon printout &amp; a valid government-issued ID must be presented before ordering. No name changes will be accommodated. If coupon will be transferred, a valid ID of the coupon owner must be presented together with the printout of the coupon.</span><span class="se">\r\n</span><span class="s2">- Coupon value must be used in 1 visit. Buy as many as you want. Not valid for cash back. Not valid with other promos and discounts, such as Senior Citizen, PWD or Diplomat.</span><span class="se">\r\n</span><span class="s2">- Coupon can be used to pay for taxes and charges. Any purchases in excess of the coupon value must be settled directly with the merchant, subject to applicable taxes and charges."</span>,
+      <span class="s2">"terms-html"</span>: <span class="s2">"&lt;ul&gt;</span><span class="se">\n</span><span class="s2">&lt;li&gt;One (1) coupon is valid for Php500 Worth of Food (NOT valid for drinks and for retail items).&lt;/li&gt;</span><span class="se">\n</span><span class="s2">&lt;li&gt;Redeemable Mondays to Fridays only from October 14, 2015 to November 16, 2015 excluding declared holidays.&lt;/li&gt;</span><span class="se">\n</span><span class="s2">&lt;li&gt;Valid at SARSA Kitchen+Bar The Fort, Makati or SM Mall of Asia branch. Branch chosen during purchase is FINAL and CANNOT be changed afterwards.&lt;/li&gt;</span><span class="se">\n</span><span class="s2">&lt;li&gt;Valid for dine-in only. Not valid for takeout and delivery. Maximum of 2 coupons per table, per visit (regardless if under 1 name or different names). No splitting of bills allowed.&lt;/li&gt;</span><span class="se">\n</span><span class="s2">&lt;li&gt;Reservations are required 24 hours in advance. Subject to seat availability. Reserve early: SARSA Kitchen+Bar will strictly honor 20 coupons per day to ensure high quality of service. To aid in redemption, please let them know that you have a Deal Grocer coupon.&lt;/li&gt;</span><span class="se">\n</span><span class="s2">&lt;li&gt;Coupon printout &amp;amp; a valid government-issued ID must be presented before ordering. No name changes will be accommodated. If coupon will be transferred, a valid ID of the coupon owner must be presented together with the printout of the coupon.&lt;/li&gt;</span><span class="se">\n</span><span class="s2">&lt;li&gt;Coupon value must be used in 1 visit. Buy as many as you want. Not valid for cash back. Not valid with other promos and discounts, such as Senior Citizen, PWD or Diplomat.&lt;/li&gt;</span><span class="se">\n</span><span class="s2">&lt;li&gt;Coupon can be used to pay for taxes and charges. Any purchases in excess of the coupon value must be settled directly with the merchant, subject to applicable taxes and charges.&lt;/li&gt;</span><span class="se">\n</span><span class="s2">&lt;/ul&gt;</span><span class="se">\n</span><span class="s2">"</span>,
+      <span class="s2">"redemption"</span>: <span class="s2">"October 14, 2015 - December 28, 2015"</span>
+    <span class="o">}</span>,
+    <span class="s2">"coupons"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"code"</span>: <span class="s2">"C6WM-3D7T-ZRVXJ-1C8F0H"</span>,
+        <span class="s2">"recipient-name"</span>: <span class="s2">"Erol Fornoles"</span>,
+        <span class="s2">"recipient-birthdate"</span>: <span class="s2">"August 31, 1979"</span>
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Get coupon listing by deal.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+<tr>
+<td>deal</td>
+<td>true</td>
+<td>5603d92269702d4042800100</td>
+</tr>
+</tbody></table>
+
           <h1 id="markup">Markup</h1>
 
 <h2 id="markdown">Markdown</h2>
