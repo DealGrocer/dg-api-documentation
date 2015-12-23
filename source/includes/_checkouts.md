@@ -275,9 +275,10 @@ Content-Type: application/json
 }
 ```
 
-Checkout using credit cards.
+Checkout using credit cards. Set the `installment` parameter to `true` to make an installment payment.
 
 Parameter | Required | Sample
 --- | --- | ---
 session | true | 561b671b4f72695642000000
 token | true | 3kbnhw
+installment | false | false
