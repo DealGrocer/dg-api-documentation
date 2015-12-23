@@ -235,7 +235,8 @@ Authorization: Bearer :session
 
 {
   "data": {
-    "token": token
+    "token": token,
+    "installment": false
   }
 }
 ```
