@@ -18,6 +18,7 @@ includes:
   - cards
   - checkouts
   - coupons
+  - installments
   - markup
 
 search: true
