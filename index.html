@@ -1546,6 +1546,70 @@ Content-Type: application/json
 <span class="o">}</span>
 </code></pre>
 
+<blockquote>
+<h4 id="new-order-for-someone-else-of-a-given-deal-and-branch-without-pickers">New Order For Someone Else Of A Given Deal And Branch Without Pickers</h4>
+
+<h5 id="request">Request</h5>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 POST /platform/v2/order/deals/:deal/branches/:branch
+Content-Type: application/json
+Authorization: Bearer :session
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"order"</span>: <span class="o">{</span>
+      <span class="s2">"variant-id"</span>: :variant,
+      <span class="s2">"quantity"</span>: :quantity,
+      <span class="s2">"recipient"</span>: <span class="o">{</span>
+        <span class="s2">"firstname"</span>: :recipient-firstname,
+        <span class="s2">"lastname"</span>: :recipient-lastname
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h5 id="response-success">Response: Success</h5>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+</code></pre>
+
+<blockquote>
+<h5 id="response-deal-or-branch-no-longer-available">Response: Deal Or Branch No Longer Available</h5>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 404 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"errors"</span>: <span class="o">{</span>
+    <span class="s2">"message"</span>: <span class="s2">"Uh oh, this deal is no longer available."</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<blockquote>
+<h5 id="response-insufficient-stocks-available">Response: Insufficient Stocks Available</h5>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 400 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"errors"</span>: <span class="o">{</span>
+    <span class="s2">"message"</span>: <span class="s2">"Uh oh, someone beat you to it. Please select a lower quantity."</span>
+  <span class="o">}</span>,
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"variants"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d980000"</span>,
+        <span class="s2">"available"</span>: 4
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
 <p>Post an order for the given deal and branch.</p>
 
 <table><thead>
