@@ -1,41 +1,18 @@
 # Orders
 
-## Delete
+## Prepare
 
-> #### Request 
+> #### New Order For A Given Deal And Branch Without Pickers
+
+> ##### Request
 
 ```shell
-HTTP/1.1 DELETE /platform/v1/order
+HTTP/1.1 GET /platform/v2/order/deals/:deal/branches/:branch
 Content-Type: application/json
 Authorization: Bearer :session
 ```
 
-> #### Response
-
-```shell
-HTTP/1.1 200 OK
-Content-Type: application/json
-```
-
-Clear a customer's order. Must be called everytime the customer navigates to the deal information page.
-
-Parameter | Required | Sample
---- | --- | ---
-session | true | 561b671b4f72695642000000
-
-
-
-## Get Order Summary per Branch
-
-> #### Request
-
-```shell
-HTTP/1.1 GET /platform/v1/order/branches?product-id=:product
-Content-Type: application/json
-Authorization: Bearer :session
-```
-
-> #### Response
+> ##### Response
 
 ```shell
 HTTP/1.1 200 OK
@@ -43,227 +20,109 @@ Content-Type: application/json
 
 {
   "data": {
-    "branches": [
+    "variants": [
       {
-        "id": "56273ab169702d425ca20000",
-        "name": "Banawe",
-        "recipients": [
-          {
-            "firstname": "You",
-            "quantity": 1
-          },
-          {
-            "firstname": "John",
-            "quantity": 1
-          }
-        ]
-      },
-      {
-        "id": "562738f969702d3c70700000",
-        "name": "Kapitolyo",
-        "recipients": []
-      },
-      {
-        "id": "5627384b69702d3c6d730000",
-        "name": "Little Baguio",
-        "recipients": []
+        "id": "56276e9269702d3c6d980000",
+        "available": 4
       }
-    ],
+    ]
+  }
+}
+```
+
+> #### New Order For A Given Deal And Branch With Pickers
+
+> ##### Request
+
+```shell
+HTTP/1.1 GET /platform/v2/order/deals/:deal/branches/:branch
+Content-Type: application/json
+Authorization: Bearer :session
+```
+
+> ##### Response
+
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "variants": [
+      {
+        "id": "56276e9269702d3c6d900000",
+        "available": 4,
+        "property-name": "Schedule",
+        "property-value": "Monday"
+      },
+      {
+        "id": "56276e9269702d3c6d910000",
+        "available": 5,
+        "property-name": "Schedule",
+        "property-value": "Tuesday"
+      },
+      {
+        "id": "56276e9269702d3c6d920000",
+        "available": 3,
+        "property-name": "Schedule",
+        "property-value": "Wednesday"
+      },
+      {
+        "id": "56276e9269702d3c6d930000",
+        "available": 1,
+        "property-name": "Schedule",
+        "property-value": "Thursday"
+      },
+      {
+        "id": "56276e9269702d3c6d940000",
+        "available": 2,
+        "property-name": "Schedule",
+        "property-value": "Friday"
+      }
+    ]
+  }
+}
+```
+
+Prepare an order for a given deal and branch. Returns information necessary for rendering the buying screen.
+
+Parameter | Required | Sample
+--- | --- | ---
+session | true | 561b671b4f72695642000000
+deal | true | 56276e9269702d3c6d970000
+branch | true | 56273ab169702d425ca20000
+
+
+
+## Post
+
+> #### New Order For Myself Of A Given Deal And Branch Without Pickers
+
+> ##### Request
+
+```shell
+HTTP/1.1 POST /platform/v2/order/deals/:deal/branches/:branch
+Content-Type: application/json
+Authorization: Bearer :session
+
+{
+  "data": {
     "order": {
-      "total-php": "₱2,200.00"
+      "variant-id": :variant,
+      "quantity": :quantity,
     }
   }
 }
 ```
 
-Get summary of order entries grouped by deal branches.
-
-Parameter | Required | Sample
---- | --- | ---
-session | true | 561b671b4f72695642000000
-product | true | 56276e9269702d3c6d970000
-
-
-## Get Order Entries by Branch
-
-> #### Request
-
-```shell
-HTTP/1.1 GET /platform/v1/order/branches/:branch?product-id=:product
-Content-Type: application/json
-Authorization: Bearer :session
-```
-
-> #### Response
+> ##### Response: Success
 
 ```shell
 HTTP/1.1 200 OK
 Content-Type: application/json
-
-{
-  "data": {
-    "branch": {
-      "id": "56273ab169702d425ca20000",
-      "name": "Banawe"
-    },
-    "product": {
-      "id": "56276e9269702d3c6d970000",
-      "name": "Greeka Kouzina Feast: Choose Your Own 3-Course Meal for 2"
-    },
-    "variants": [
-      {
-        "id": "56276e9269702d3c6d980000",
-        "remaining": 4,
-        "properties": {}
-      }
-    ],
-    "for-myself": {
-      "id": "565d642cea2c4c6725000001",
-      "variant": {
-        "id": "56276e9269702d3c6d980000",
-        "properties": {}
-      },
-      "quantity": 1
-    },
-    "for-someone": [
-      {
-        "id": "565d642cea2c4c6725000002",
-        "variant": {
-          "id": "56276e9269702d3c6d980000",
-          "properties": {}
-        },
-        "quantity": 1,
-        "recipient": {
-          "firstname": "John",
-          "lastname": "Doe"
-        }
-      }
-    ]
-  }
-}
 ```
 
-Get order entries by branch.
-
-Parameter | Required | Sample
---- | --- | ---
-session | true | 561b671b4f72695642000000
-branch | true | 56273ab169702d425ca20000
-product | true | 56276e9269702d3c6d970000
-
-
-
-## Save Order Entries by Branch
-
-> #### Request
-
-```shell
-HTTP/1.1 PATCH /platform/v1/order/branches/:branch?product-id=:product
-Content-Type: application/json
-Authorization: Bearer :session
-
-{
-  "data": {
-    "for-myself": {
-      "variant-id": variant,
-      "quantity": quantity
-    },
-    "for-someone": [
-      {
-        "variant-id": variant,
-        "quantity": quantity,
-        "recipient": {
-          "firstname": recipient-firstname,
-          "lastname": recipient-lastname
-        }
-      }
-    ]
-  }
-}
-```
-
-> #### Successful Reservation of Order Entries
-
-```shell
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "data": {
-    "branch": {
-      "id": "56273ab169702d425ca20000",
-      "name": "Banawe"
-    },
-    "product": {
-      "id": "56276e9269702d3c6d970000",
-      "name": "Greeka Kouzina Feast: Choose Your Own 3-Course Meal for 2"
-    },
-    "variants": [
-      {
-        "id": "56276e9269702d3c6d980000",
-        "remaining": 4,
-        "properties": {}
-      }
-    ],
-    "for-myself": {
-      "id": "565d642cea2c4c6725000001",
-      "variant": {
-        "id": "56276e9269702d3c6d980000",
-        "properties": {}
-      },
-      "quantity": 1
-    },
-    "for-someone": [
-      {
-        "id": "565d642cea2c4c6725000002",
-        "variant": {
-          "id": "56276e9269702d3c6d980000",
-          "properties": {}
-        },
-        "quantity": 1,
-        "recipient": {
-          "firstname": "John",
-          "lastname": "Doe"
-        }
-      }
-    ]
-  }
-}
-```
-
-> #### Insufficient Stocks Available
-
-```shell
-HTTP/1.1 400 OK
-Content-Type: application/json
-
-{
-  "errors": {
-    "message": "Uh oh, someone beat you to it. Please select a lower quantity."
-  },
-  "data": {
-    "branch": {
-      "id": "56273ab169702d425ca20000",
-      "name": "Banawe"
-    },
-    "product": {
-      "id": "56276e9269702d3c6d970000",
-      "name": "Greeka Kouzina Feast: Choose Your Own 3-Course Meal for 2"
-    },
-    "variants": [
-      {
-        "id": "56276e9269702d3c6d980000",
-        "remaining": 6,
-        "properties": {}
-      }
-    ],
-    "for-myself": {},
-    "for-someone": []
-  }
-}
-```
-
-> #### Deal No Longer Available
+> ##### Response: Deal Or Branch No Longer Available
 
 ```shell
 HTTP/1.1 404 OK
@@ -274,15 +133,37 @@ Content-Type: application/json
     "message": "Uh oh, this deal is no longer available."
   }
 }
+```
 
-Save order entries by branch.
+> ##### Response: Insufficient Stocks Available
+
+```shell
+HTTP/1.1 400 OK
+Content-Type: application/json
+
+{
+  "errors": {
+    "message": "Uh oh, someone beat you to it. Please select a lower quantity."
+  },
+  "data": {
+    "variants": [
+      {
+        "id": "56276e9269702d3c6d980000",
+        "available": 4
+      }
+    ]
+  }
+}
+```
+
+Post an order for the given deal and branch.
 
 Parameter | Required | Sample
 --- | --- | ---
 session | true | 561b671b4f72695642000000
+deal | true | 56276e9269702d3c6d970000
 branch | true | 56273ab169702d425ca20000
-product | true | 56276e9269702d3c6d970000
 variant | true | 56276e9269702d3c6d980000
 quantity | true | 1
-recipient-firstname | true | John
-recipient-lastname | true | Doe
+recipient-firstname | false | John
+recipeint-lastname | false | Doe

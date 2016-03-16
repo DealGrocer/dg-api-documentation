@@ -529,7 +529,7 @@ html, body {
     background-color: $code-bg;
     color: #fff;
 
-    padding: 1em $main-padding 1em;
+    padding: 0 $main-padding;
     margin: 0;
     width: $examples-width;
 
@@ -543,11 +543,21 @@ html, body {
 
     &>h4 {
       @extend %default-font;
+      text-transform: uppercase;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin: 0;
+    }
+
+    &>h5 {
+      text-transform: uppercase;
+      padding-top: 10px;
+      padding-bottom: 10px;
       margin: 0;
     }
 
     &>p {
-      margin: 0;
+      margin: 0
     }
 
     a {
@@ -559,6 +569,7 @@ html, body {
 
   pre {
     @extend %code-font;
+    padding: 10px $main-padding;
   }
 
   blockquote {
