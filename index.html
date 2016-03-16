@@ -1374,171 +1374,91 @@ Content-Type: application/json
 
           <h1 id="orders">Orders</h1>
 
-<h2 id="delete">Delete</h2>
+<h2 id="prepare">Prepare</h2>
 
 <blockquote>
-<h4 id="request">Request</h4>
+<h4 id="new-order-for-a-given-deal-and-branch-without-pickers">New Order For A Given Deal And Branch Without Pickers</h4>
+
+<h5 id="request">Request</h5>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 DELETE /platform/v1/order
+<pre class="highlight shell"><code>HTTP/1.1 GET /platform/v2/order/deals/:deal/branches/:branch
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
-<h4 id="response">Response</h4>
-</blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 200 OK
-Content-Type: application/json
-</code></pre>
-
-<p>Clear a customer&rsquo;s order. Must be called everytime the customer navigates to the deal information page.</p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Sample</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>session</td>
-<td>true</td>
-<td>561b671b4f72695642000000</td>
-</tr>
-</tbody></table>
-
-<h2 id="get-order-summary-per-branch">Get Order Summary per Branch</h2>
-
-<blockquote>
-<h4 id="request">Request</h4>
-</blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /platform/v1/order/branches?product-id<span class="o">=</span>:product
-Content-Type: application/json
-Authorization: Bearer :session
-</code></pre>
-
-<blockquote>
-<h4 id="response">Response</h4>
+<h5 id="response">Response</h5>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
 Content-Type: application/json
 
 <span class="o">{</span>
   <span class="s2">"data"</span>: <span class="o">{</span>
-    <span class="s2">"branches"</span>: <span class="o">[</span>
-      <span class="o">{</span>
-        <span class="s2">"id"</span>: <span class="s2">"56273ab169702d425ca20000"</span>,
-        <span class="s2">"name"</span>: <span class="s2">"Banawe"</span>,
-        <span class="s2">"recipients"</span>: <span class="o">[</span>
-          <span class="o">{</span>
-            <span class="s2">"firstname"</span>: <span class="s2">"You"</span>,
-            <span class="s2">"quantity"</span>: 1
-          <span class="o">}</span>,
-          <span class="o">{</span>
-            <span class="s2">"firstname"</span>: <span class="s2">"John"</span>,
-            <span class="s2">"quantity"</span>: 1
-          <span class="o">}</span>
-        <span class="o">]</span>
-      <span class="o">}</span>,
-      <span class="o">{</span>
-        <span class="s2">"id"</span>: <span class="s2">"562738f969702d3c70700000"</span>,
-        <span class="s2">"name"</span>: <span class="s2">"Kapitolyo"</span>,
-        <span class="s2">"recipients"</span>: <span class="o">[]</span>
-      <span class="o">}</span>,
-      <span class="o">{</span>
-        <span class="s2">"id"</span>: <span class="s2">"5627384b69702d3c6d730000"</span>,
-        <span class="s2">"name"</span>: <span class="s2">"Little Baguio"</span>,
-        <span class="s2">"recipients"</span>: <span class="o">[]</span>
-      <span class="o">}</span>
-    <span class="o">]</span>,
-    <span class="s2">"order"</span>: <span class="o">{</span>
-      <span class="s2">"total-php"</span>: <span class="s2">"₱2,200.00"</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre>
-
-<p>Get summary of order entries grouped by deal branches.</p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Sample</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>session</td>
-<td>true</td>
-<td>561b671b4f72695642000000</td>
-</tr>
-<tr>
-<td>product</td>
-<td>true</td>
-<td>56276e9269702d3c6d970000</td>
-</tr>
-</tbody></table>
-
-<h2 id="get-order-entries-by-branch">Get Order Entries by Branch</h2>
-
-<blockquote>
-<h4 id="request">Request</h4>
-</blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /platform/v1/order/branches/:branch?product-id<span class="o">=</span>:product
-Content-Type: application/json
-Authorization: Bearer :session
-</code></pre>
-
-<blockquote>
-<h4 id="response">Response</h4>
-</blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 200 OK
-Content-Type: application/json
-
-<span class="o">{</span>
-  <span class="s2">"data"</span>: <span class="o">{</span>
-    <span class="s2">"branch"</span>: <span class="o">{</span>
-      <span class="s2">"id"</span>: <span class="s2">"56273ab169702d425ca20000"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Banawe"</span>
-    <span class="o">}</span>,
-    <span class="s2">"product"</span>: <span class="o">{</span>
-      <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d970000"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Greeka Kouzina Feast: Choose Your Own 3-Course Meal for 2"</span>
-    <span class="o">}</span>,
     <span class="s2">"variants"</span>: <span class="o">[</span>
       <span class="o">{</span>
         <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d980000"</span>,
-        <span class="s2">"remaining"</span>: 4,
-        <span class="s2">"properties"</span>: <span class="o">{}</span>
-      <span class="o">}</span>
-    <span class="o">]</span>,
-    <span class="s2">"for-myself"</span>: <span class="o">{</span>
-      <span class="s2">"id"</span>: <span class="s2">"565d642cea2c4c6725000001"</span>,
-      <span class="s2">"variant"</span>: <span class="o">{</span>
-        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d980000"</span>,
-        <span class="s2">"properties"</span>: <span class="o">{}</span>
-      <span class="o">}</span>,
-      <span class="s2">"quantity"</span>: 1
-    <span class="o">}</span>,
-    <span class="s2">"for-someone"</span>: <span class="o">[</span>
-      <span class="o">{</span>
-        <span class="s2">"id"</span>: <span class="s2">"565d642cea2c4c6725000002"</span>,
-        <span class="s2">"variant"</span>: <span class="o">{</span>
-          <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d980000"</span>,
-          <span class="s2">"properties"</span>: <span class="o">{}</span>
-        <span class="o">}</span>,
-        <span class="s2">"quantity"</span>: 1,
-        <span class="s2">"recipient"</span>: <span class="o">{</span>
-          <span class="s2">"firstname"</span>: <span class="s2">"John"</span>,
-          <span class="s2">"lastname"</span>: <span class="s2">"Doe"</span>
-        <span class="o">}</span>
+        <span class="s2">"available"</span>: 4
       <span class="o">}</span>
     <span class="o">]</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre>
 
-<p>Get order entries by branch.</p>
+<blockquote>
+<h4 id="new-order-for-a-given-deal-and-branch-with-pickers">New Order For A Given Deal And Branch With Pickers</h4>
+
+<h5 id="request">Request</h5>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 GET /platform/v2/order/deals/:deal/branches/:branch
+Content-Type: application/json
+Authorization: Bearer :session
+</code></pre>
+
+<blockquote>
+<h5 id="response">Response</h5>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"variants"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d900000"</span>,
+        <span class="s2">"available"</span>: 4,
+        <span class="s2">"property-name"</span>: <span class="s2">"Schedule"</span>,
+        <span class="s2">"property-value"</span>: <span class="s2">"Monday"</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d910000"</span>,
+        <span class="s2">"available"</span>: 5,
+        <span class="s2">"property-name"</span>: <span class="s2">"Schedule"</span>,
+        <span class="s2">"property-value"</span>: <span class="s2">"Tuesday"</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d920000"</span>,
+        <span class="s2">"available"</span>: 3,
+        <span class="s2">"property-name"</span>: <span class="s2">"Schedule"</span>,
+        <span class="s2">"property-value"</span>: <span class="s2">"Wednesday"</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d930000"</span>,
+        <span class="s2">"available"</span>: 1,
+        <span class="s2">"property-name"</span>: <span class="s2">"Schedule"</span>,
+        <span class="s2">"property-value"</span>: <span class="s2">"Thursday"</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d940000"</span>,
+        <span class="s2">"available"</span>: 2,
+        <span class="s2">"property-name"</span>: <span class="s2">"Schedule"</span>,
+        <span class="s2">"property-value"</span>: <span class="s2">"Friday"</span>
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Prepare an order for a given deal and branch. Returns information necessary for rendering the buying screen.</p>
 
 <table><thead>
 <tr>
@@ -1551,131 +1471,49 @@ Content-Type: application/json
 <td>session</td>
 <td>true</td>
 <td>561b671b4f72695642000000</td>
+</tr>
+<tr>
+<td>deal</td>
+<td>true</td>
+<td>56276e9269702d3c6d970000</td>
 </tr>
 <tr>
 <td>branch</td>
 <td>true</td>
 <td>56273ab169702d425ca20000</td>
 </tr>
-<tr>
-<td>product</td>
-<td>true</td>
-<td>56276e9269702d3c6d970000</td>
-</tr>
 </tbody></table>
 
-<h2 id="save-order-entries-by-branch">Save Order Entries by Branch</h2>
+<h2 id="post">Post</h2>
 
 <blockquote>
-<h4 id="request">Request</h4>
+<h4 id="new-order-for-myself-of-a-given-deal-and-branch-without-pickers">New Order For Myself Of A Given Deal And Branch Without Pickers</h4>
+
+<h5 id="request">Request</h5>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 PATCH /platform/v1/order/branches/:branch?product-id<span class="o">=</span>:product
+<pre class="highlight shell"><code>HTTP/1.1 POST /platform/v2/order/deals/:deal/branches/:branch
 Content-Type: application/json
 Authorization: Bearer :session
 
 <span class="o">{</span>
   <span class="s2">"data"</span>: <span class="o">{</span>
-    <span class="s2">"for-myself"</span>: <span class="o">{</span>
-      <span class="s2">"variant-id"</span>: variant,
-      <span class="s2">"quantity"</span>: quantity
-    <span class="o">}</span>,
-    <span class="s2">"for-someone"</span>: <span class="o">[</span>
-      <span class="o">{</span>
-        <span class="s2">"variant-id"</span>: variant,
-        <span class="s2">"quantity"</span>: quantity,
-        <span class="s2">"recipient"</span>: <span class="o">{</span>
-          <span class="s2">"firstname"</span>: recipient-firstname,
-          <span class="s2">"lastname"</span>: recipient-lastname
-        <span class="o">}</span>
-      <span class="o">}</span>
-    <span class="o">]</span>
+    <span class="s2">"order"</span>: <span class="o">{</span>
+      <span class="s2">"variant-id"</span>: :variant,
+      <span class="s2">"quantity"</span>: :quantity,
+    <span class="o">}</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre>
 
 <blockquote>
-<h4 id="successful-reservation-of-order-entries">Successful Reservation of Order Entries</h4>
+<h5 id="response-success">Response: Success</h5>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
 Content-Type: application/json
-
-<span class="o">{</span>
-  <span class="s2">"data"</span>: <span class="o">{</span>
-    <span class="s2">"branch"</span>: <span class="o">{</span>
-      <span class="s2">"id"</span>: <span class="s2">"56273ab169702d425ca20000"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Banawe"</span>
-    <span class="o">}</span>,
-    <span class="s2">"product"</span>: <span class="o">{</span>
-      <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d970000"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Greeka Kouzina Feast: Choose Your Own 3-Course Meal for 2"</span>
-    <span class="o">}</span>,
-    <span class="s2">"variants"</span>: <span class="o">[</span>
-      <span class="o">{</span>
-        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d980000"</span>,
-        <span class="s2">"remaining"</span>: 4,
-        <span class="s2">"properties"</span>: <span class="o">{}</span>
-      <span class="o">}</span>
-    <span class="o">]</span>,
-    <span class="s2">"for-myself"</span>: <span class="o">{</span>
-      <span class="s2">"id"</span>: <span class="s2">"565d642cea2c4c6725000001"</span>,
-      <span class="s2">"variant"</span>: <span class="o">{</span>
-        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d980000"</span>,
-        <span class="s2">"properties"</span>: <span class="o">{}</span>
-      <span class="o">}</span>,
-      <span class="s2">"quantity"</span>: 1
-    <span class="o">}</span>,
-    <span class="s2">"for-someone"</span>: <span class="o">[</span>
-      <span class="o">{</span>
-        <span class="s2">"id"</span>: <span class="s2">"565d642cea2c4c6725000002"</span>,
-        <span class="s2">"variant"</span>: <span class="o">{</span>
-          <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d980000"</span>,
-          <span class="s2">"properties"</span>: <span class="o">{}</span>
-        <span class="o">}</span>,
-        <span class="s2">"quantity"</span>: 1,
-        <span class="s2">"recipient"</span>: <span class="o">{</span>
-          <span class="s2">"firstname"</span>: <span class="s2">"John"</span>,
-          <span class="s2">"lastname"</span>: <span class="s2">"Doe"</span>
-        <span class="o">}</span>
-      <span class="o">}</span>
-    <span class="o">]</span>
-  <span class="o">}</span>
-<span class="o">}</span>
 </code></pre>
 
 <blockquote>
-<h4 id="insufficient-stocks-available">Insufficient Stocks Available</h4>
-</blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 400 OK
-Content-Type: application/json
-
-<span class="o">{</span>
-  <span class="s2">"errors"</span>: <span class="o">{</span>
-    <span class="s2">"message"</span>: <span class="s2">"Uh oh, someone beat you to it. Please select a lower quantity."</span>
-  <span class="o">}</span>,
-  <span class="s2">"data"</span>: <span class="o">{</span>
-    <span class="s2">"branch"</span>: <span class="o">{</span>
-      <span class="s2">"id"</span>: <span class="s2">"56273ab169702d425ca20000"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Banawe"</span>
-    <span class="o">}</span>,
-    <span class="s2">"product"</span>: <span class="o">{</span>
-      <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d970000"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Greeka Kouzina Feast: Choose Your Own 3-Course Meal for 2"</span>
-    <span class="o">}</span>,
-    <span class="s2">"variants"</span>: <span class="o">[</span>
-      <span class="o">{</span>
-        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d980000"</span>,
-        <span class="s2">"remaining"</span>: 6,
-        <span class="s2">"properties"</span>: <span class="o">{}</span>
-      <span class="o">}</span>
-    <span class="o">]</span>,
-    <span class="s2">"for-myself"</span>: <span class="o">{}</span>,
-    <span class="s2">"for-someone"</span>: <span class="o">[]</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre>
-
-<blockquote>
-<h4 id="deal-no-longer-available">Deal No Longer Available</h4>
+<h5 id="response-deal-or-branch-no-longer-available">Response: Deal Or Branch No Longer Available</h5>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 404 OK
 Content-Type: application/json
@@ -1685,26 +1523,81 @@ Content-Type: application/json
     <span class="s2">"message"</span>: <span class="s2">"Uh oh, this deal is no longer available."</span>
   <span class="o">}</span>
 <span class="o">}</span>
-
-Save order entries by branch.
-
-Parameter | Required | Sample
---- | --- | ---
-session | <span class="nb">true</span> | 561b671b4f72695642000000
-branch | <span class="nb">true</span> | 56273ab169702d425ca20000
-product | <span class="nb">true</span> | 56276e9269702d3c6d970000
-variant | <span class="nb">true</span> | 56276e9269702d3c6d980000
-quantity | <span class="nb">true</span> | 1
-recipient-firstname | <span class="nb">true</span> | John
-recipient-lastname | <span class="nb">true</span> | Doe
 </code></pre>
+
+<blockquote>
+<h5 id="response-insufficient-stocks-available">Response: Insufficient Stocks Available</h5>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 400 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"errors"</span>: <span class="o">{</span>
+    <span class="s2">"message"</span>: <span class="s2">"Uh oh, someone beat you to it. Please select a lower quantity."</span>
+  <span class="o">}</span>,
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"variants"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d980000"</span>,
+        <span class="s2">"available"</span>: 4
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Post an order for the given deal and branch.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+<tr>
+<td>deal</td>
+<td>true</td>
+<td>56276e9269702d3c6d970000</td>
+</tr>
+<tr>
+<td>branch</td>
+<td>true</td>
+<td>56273ab169702d425ca20000</td>
+</tr>
+<tr>
+<td>variant</td>
+<td>true</td>
+<td>56276e9269702d3c6d980000</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>true</td>
+<td>1</td>
+</tr>
+<tr>
+<td>recipient-firstname</td>
+<td>false</td>
+<td>John</td>
+</tr>
+<tr>
+<td>recipeint-lastname</td>
+<td>false</td>
+<td>Doe</td>
+</tr>
+</tbody></table>
 
           <h1 id="settings">Settings</h1>
 
 <h2 id="get">Get</h2>
 
 <blockquote>
-<h4 id="request">Request</h4>
+<h5 id="request">Request</h5>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 GET /v1/settings
 Content-Type: application/json
@@ -1712,7 +1605,7 @@ Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
-<h4 id="response">Response</h4>
+<h5 id="response">Response</h5>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
 Content-Type: application/json
@@ -1749,7 +1642,7 @@ Content-Type: application/json
 <h2 id="update">Update</h2>
 
 <blockquote>
-<h4 id="request">Request</h4>
+<h5 id="request">Request</h5>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 POST /v1/settings
 Content-Type: application/json
@@ -1763,7 +1656,7 @@ Authorization: Bearer :session
 </code></pre>
 
 <blockquote>
-<h4 id="response">Response</h4>
+<h5 id="response">Response</h5>
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
 Content-Type: application/json

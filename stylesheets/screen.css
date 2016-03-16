@@ -994,7 +994,7 @@ html, body {
 .content pre, .content blockquote {
   background-color: #292929;
   color: #fff;
-  padding: 1em 28px 1em;
+  padding: 0 28px;
   margin: 0;
   width: 60%;
   float: right;
@@ -1003,61 +1003,73 @@ html, body {
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4); }
   /* line 544, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content pre > h4, .content blockquote > h4 {
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: 0; }
-  /* line 549, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 552, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  .content pre > h5, .content blockquote > h5 {
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0; }
+  /* line 559, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content pre > p, .content blockquote > p {
     margin: 0; }
-  /* line 553, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 563, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content pre a, .content blockquote a {
     color: #fff;
     text-decoration: none;
     border-bottom: dashed 1px #ccc; }
-/* line 565, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+/* line 570, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+.content pre {
+  padding: 10px 28px; }
+/* line 576, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
 .content blockquote > p {
   color: #fff; }
 
 @media (max-width: 930px) {
-  /* line 578, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 589, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper {
     left: -230px; }
-    /* line 581, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+    /* line 592, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
     .tocify-wrapper.open {
       left: 0; }
 
-  /* line 586, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 597, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .page-wrapper {
     margin-left: 0; }
 
-  /* line 590, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 601, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   #nav-button {
     display: block; }
 
-  /* line 594, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 605, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper .tocify-item > a {
     padding-top: 0.3em;
     padding-bottom: 0.3em; } }
 @media (max-width: 700px) {
-  /* line 601, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 612, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .dark-box {
     display: none; }
 
-  /* line 605, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 616, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content > h1, .content > h2, .content > h3, .content > h4, .content > h5, .content > h6, .content > p, .content > table, .content > ul, .content > ol, .content > aside, .content > dl {
     margin-right: 0; }
 
-  /* line 609, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 620, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .tocify-wrapper .lang-selector {
     display: block; }
 
-  /* line 613, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 624, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .page-wrapper .lang-selector {
     display: none; }
 
-  /* line 617, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 628, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content pre, .content blockquote {
     width: auto;
     float: none; }
 
-  /* line 622, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
+  /* line 633, /Users/Erol/Projects/Work/dg-api-documentation/source/stylesheets/screen.css.scss */
   .content > pre + h1, .content > blockquote + h1, .content > pre + h2, .content > blockquote + h2, .content > pre + h3, .content > blockquote + h3, .content > pre + h4, .content > blockquote + h4, .content > pre + h5, .content > blockquote + h5, .content > pre + h6, .content > blockquote + h6, .content > pre + p, .content > blockquote + p, .content > pre + table, .content > blockquote + table, .content > pre + ul, .content > blockquote + ul, .content > pre + ol, .content > blockquote + ol, .content > pre + aside, .content > blockquote + aside, .content > pre + dl, .content > blockquote + dl {
     margin-top: 28px; } }
