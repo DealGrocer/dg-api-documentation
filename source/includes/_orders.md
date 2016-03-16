@@ -156,6 +156,70 @@ Content-Type: application/json
 }
 ```
 
+> #### New Order For Someone Else Of A Given Deal And Branch Without Pickers
+
+> ##### Request
+
+```shell
+HTTP/1.1 POST /platform/v2/order/deals/:deal/branches/:branch
+Content-Type: application/json
+Authorization: Bearer :session
+
+{
+  "data": {
+    "order": {
+      "variant-id": :variant,
+      "quantity": :quantity,
+      "recipient": {
+        "firstname": :recipient-firstname,
+        "lastname": :recipient-lastname
+      }
+    }
+  }
+}
+```
+
+> ##### Response: Success
+
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
+```
+
+> ##### Response: Deal Or Branch No Longer Available
+
+```shell
+HTTP/1.1 404 OK
+Content-Type: application/json
+
+{
+  "errors": {
+    "message": "Uh oh, this deal is no longer available."
+  }
+}
+```
+
+> ##### Response: Insufficient Stocks Available
+
+```shell
+HTTP/1.1 400 OK
+Content-Type: application/json
+
+{
+  "errors": {
+    "message": "Uh oh, someone beat you to it. Please select a lower quantity."
+  },
+  "data": {
+    "variants": [
+      {
+        "id": "56276e9269702d3c6d980000",
+        "available": 4
+      }
+    ]
+  }
+}
+```
+
 Post an order for the given deal and branch.
 
 Parameter | Required | Sample
