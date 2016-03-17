@@ -101,7 +101,7 @@ branch | true | 56273ab169702d425ca20000
 > ##### Request
 
 ```shell
-HTTP/1.1 POST /platform/v2/order/deals/:deal/branches/:branch
+HTTP/1.1 PUT /platform/v2/order/deals/:deal/branches/:branch
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -120,6 +120,22 @@ Authorization: Bearer :session
 ```shell
 HTTP/1.1 200 OK
 Content-Type: application/json
+
+{
+  "data": {
+    "variants": [
+      {
+        "id": "55ffc52a69702d1dfb750000",
+        "available": 4,
+        "discount-price": 375
+      },
+    ],
+    "order": {
+      "variant-id": "55ffc52a69702d1dfb750000",
+      "quantity": 4
+    }
+  }
+}
 ```
 
 > ##### Response: Deal Or Branch No Longer Available
@@ -148,8 +164,9 @@ Content-Type: application/json
   "data": {
     "variants": [
       {
-        "id": "56276e9269702d3c6d980000",
-        "available": 4
+        "id": "55ffc52a69702d1dfb750000",
+        "available": 4,
+        "discount-price": 375
       }
     ]
   }
@@ -161,7 +178,7 @@ Content-Type: application/json
 > ##### Request
 
 ```shell
-HTTP/1.1 POST /platform/v2/order/deals/:deal/branches/:branch
+HTTP/1.1 PUT /platform/v2/order/deals/:deal/branches/:branch
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -184,6 +201,26 @@ Authorization: Bearer :session
 ```shell
 HTTP/1.1 200 OK
 Content-Type: application/json
+
+{
+  "data": {
+    "variants": [
+      {
+        "id": "55ffc52a69702d1dfb750000",
+        "available": 4,
+        "discount-price": 375
+      },
+    ],
+    "order": {
+      "variant-id": "55ffc52a69702d1dfb750000",
+      "quantity": 4,
+      "recipient": {
+        "firstname": "John",
+        "lastname": "Doe"
+      }
+    }
+  }
+}
 ```
 
 > ##### Response: Deal Or Branch No Longer Available
@@ -212,8 +249,9 @@ Content-Type: application/json
   "data": {
     "variants": [
       {
-        "id": "56276e9269702d3c6d980000",
-        "available": 4
+        "id": "55ffc52a69702d1dfb750000",
+        "available": 4,
+        "discount-price": 375
       }
     ]
   }
