@@ -1491,7 +1491,7 @@ Content-Type: application/json
 
 <h5 id="request">Request</h5>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /platform/v2/order/deals/:deal/branches/:branch
+<pre class="highlight shell"><code>HTTP/1.1 PUT /platform/v2/order/deals/:deal/branches/:branch
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -1510,6 +1510,22 @@ Authorization: Bearer :session
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
 Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"variants"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"id"</span>: <span class="s2">"55ffc52a69702d1dfb750000"</span>,
+        <span class="s2">"available"</span>: 4,
+        <span class="s2">"discount-price"</span>: 375
+      <span class="o">}</span>,
+    <span class="o">]</span>,
+    <span class="s2">"order"</span>: <span class="o">{</span>
+      <span class="s2">"variant-id"</span>: <span class="s2">"55ffc52a69702d1dfb750000"</span>,
+      <span class="s2">"quantity"</span>: 4
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
 </code></pre>
 
 <blockquote>
@@ -1538,8 +1554,9 @@ Content-Type: application/json
   <span class="s2">"data"</span>: <span class="o">{</span>
     <span class="s2">"variants"</span>: <span class="o">[</span>
       <span class="o">{</span>
-        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d980000"</span>,
-        <span class="s2">"available"</span>: 4
+        <span class="s2">"id"</span>: <span class="s2">"55ffc52a69702d1dfb750000"</span>,
+        <span class="s2">"available"</span>: 4,
+        <span class="s2">"discount-price"</span>: 375
       <span class="o">}</span>
     <span class="o">]</span>
   <span class="o">}</span>
@@ -1551,7 +1568,7 @@ Content-Type: application/json
 
 <h5 id="request">Request</h5>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /platform/v2/order/deals/:deal/branches/:branch
+<pre class="highlight shell"><code>HTTP/1.1 PUT /platform/v2/order/deals/:deal/branches/:branch
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -1574,6 +1591,26 @@ Authorization: Bearer :session
 </blockquote>
 <pre class="highlight shell"><code>HTTP/1.1 200 OK
 Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"variants"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"id"</span>: <span class="s2">"55ffc52a69702d1dfb750000"</span>,
+        <span class="s2">"available"</span>: 4,
+        <span class="s2">"discount-price"</span>: 375
+      <span class="o">}</span>,
+    <span class="o">]</span>,
+    <span class="s2">"order"</span>: <span class="o">{</span>
+      <span class="s2">"variant-id"</span>: <span class="s2">"55ffc52a69702d1dfb750000"</span>,
+      <span class="s2">"quantity"</span>: 4,
+      <span class="s2">"recipient"</span>: <span class="o">{</span>
+        <span class="s2">"firstname"</span>: <span class="s2">"John"</span>,
+        <span class="s2">"lastname"</span>: <span class="s2">"Doe"</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
 </code></pre>
 
 <blockquote>
@@ -1602,8 +1639,9 @@ Content-Type: application/json
   <span class="s2">"data"</span>: <span class="o">{</span>
     <span class="s2">"variants"</span>: <span class="o">[</span>
       <span class="o">{</span>
-        <span class="s2">"id"</span>: <span class="s2">"56276e9269702d3c6d980000"</span>,
-        <span class="s2">"available"</span>: 4
+        <span class="s2">"id"</span>: <span class="s2">"55ffc52a69702d1dfb750000"</span>,
+        <span class="s2">"available"</span>: 4,
+        <span class="s2">"discount-price"</span>: 375
       <span class="o">}</span>
     <span class="o">]</span>
   <span class="o">}</span>
