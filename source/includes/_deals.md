@@ -18,6 +18,11 @@ Content-Type: application/json
 
 {
   "data":{
+    "user": {
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "john.doe@email.com"
+    },
     "location":{
       "name":"Makati",
       "key":"makati",
