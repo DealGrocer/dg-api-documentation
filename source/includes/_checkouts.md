@@ -206,7 +206,7 @@ Content-Type: application/json
 > #### Failure
 
 ```shell
-HTTP/1.1 200 OK
+HTTP/1.1 400 Bad Request
 Content-Type: application/json
 
 {
@@ -266,7 +266,7 @@ Content-Type: application/json
 > #### Failure
 
 ```shell
-HTTP/1.1 200 OK
+HTTP/1.1 400 Bad Request
 Content-Type: application/json
 
 {
