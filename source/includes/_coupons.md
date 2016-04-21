@@ -111,3 +111,34 @@ Parameter | Required | Sample
 --- | --- | ---
 session | true | 561b671b4f72695642000000
 deal | true | 5603d92269702d4042800100
+
+
+
+## Count
+
+> #### Request
+
+```shell
+HTTP/1.1 GET /v2/coupons/count
+Content-Type: application/json
+Authorization: Bearer :session
+```
+
+> #### Response
+
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data": {
+    "count": 104
+  }
+}
+```
+
+Get coupon count.
+
+Parameter | Required | Sample
+--- | --- | ---
+session | true | 561b671b4f72695642000000
