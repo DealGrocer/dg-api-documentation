@@ -5,7 +5,7 @@
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/coupons
+HTTP/1.1 GET /v2/coupons
 Content-Type: application/json
 Authorization: Bearer :session
 ```
@@ -74,7 +74,7 @@ session | true | 561b671b4f72695642000000
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/coupons/:deal
+HTTP/1.1 GET /v2/coupons/:deal
 Content-Type: application/json
 Authorization: Bearer :session
 ```

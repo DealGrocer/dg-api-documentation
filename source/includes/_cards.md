@@ -5,7 +5,7 @@
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/cards
+HTTP/1.1 GET /v2/cards
 Content-Type: application/json
 Authorization: Bearer :session
 ```
@@ -54,7 +54,7 @@ card-number-last-4 | The last 4 digits of the credit card.
 > #### Request
 
 ```shell
-HTTP/1.1 POST /v1/cards/new
+HTTP/1.1 POST /v2/cards/new
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -97,7 +97,7 @@ Call this to add a new credit card. A NONCE needs to be acquired from Braintree 
 > #### Request
 
 ```shell
-HTTP/1.1 DELETE /v1/cards/delete
+HTTP/1.1 DELETE /v2/cards/delete
 Content-Type: application/json
 Authorization: Bearer :session
 

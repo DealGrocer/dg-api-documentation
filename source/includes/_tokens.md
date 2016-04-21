@@ -5,7 +5,7 @@
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/tokens/braintree
+HTTP/1.1 GET /v2/tokens/braintree
 Content-Type: application/json
 Authorization: Bearer :session
 ```

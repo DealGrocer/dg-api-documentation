@@ -5,7 +5,7 @@
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/location?latitude=:latitude&longitude=:longitude&accuracy=:accuracy
+HTTP/1.1 GET /v2/location?latitude=:latitude&longitude=:longitude&accuracy=:accuracy
 Content-Type: application/json
 Authorization: Bearer :session
 ```
@@ -42,7 +42,7 @@ accuracy | false | 30
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/locations?location=:location
+HTTP/1.1 GET /v2/locations?location=:location
 Content-Type: application/json
 Authorization: Bearer :session
 ```

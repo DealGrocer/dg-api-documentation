@@ -5,7 +5,7 @@
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/installments
+HTTP/1.1 GET /v2/installments
 Content-Type: application/json
 Authorization: Bearer :session
 ```

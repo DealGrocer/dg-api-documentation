@@ -3,7 +3,7 @@
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/collections
+HTTP/1.1 GET /v2/collections
 Content-Type: application/json
 Authorization: Bearer :session
 ```

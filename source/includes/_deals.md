@@ -5,7 +5,7 @@
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/dashboard/mobile?location=:location&page=:page
+HTTP/1.1 GET /v2/dashboard/mobile?location=:location&page=:page
 Content-Type: application/json
 Authorization: Bearer :session
 ```
@@ -255,7 +255,7 @@ page | false | 1
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/collections/:collection/deals
+HTTP/1.1 GET /v2/collections/:collection/deals
 Content-Type: application/json
 Authorization: Bearer :session
 ```
@@ -318,7 +318,7 @@ collection | true | dining
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/locations/:location/deals
+HTTP/1.1 GET /v2/locations/:location/deals
 Content-Type: application/json
 Authorization: Bearer :session
 ```
@@ -381,7 +381,7 @@ location | true | makati
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/deals?page=:page
+HTTP/1.1 GET /v2/deals?page=:page
 Content-Type: application/json
 Authorization: Bearer :session
 ```
@@ -441,7 +441,7 @@ page | true | 1
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/deals/:deal
+HTTP/1.1 GET /v2/deals/:deal
 Content-Type: application/json
 Authorization: Bearer :session
 ```

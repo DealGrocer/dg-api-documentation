@@ -5,7 +5,7 @@
 > #### Request
 
 ```shell
-HTTP/1.1 GET /v1/checkout
+HTTP/1.1 GET /v2/checkout
 Content-Type: application/json
 Authorization: Bearer :session
 ```
@@ -62,7 +62,7 @@ session | true | 561b671b4f72695642000000
 > #### Request
 
 ```shell
-HTTP/1.1 POST /v1/checkout/prepayment/use
+HTTP/1.1 POST /v2/checkout/prepayment/use
 Content-Type: application/json
 Authorization: Bearer :session
 ```
@@ -119,7 +119,7 @@ session | true | 561b671b4f72695642000000
 > #### Request
 
 ```shell
-HTTP/1.1 POST /v1/checkout/prepayment/unuse
+HTTP/1.1 POST /v2/checkout/prepayment/unuse
 Content-Type: application/json
 Authorization: Bearer :session
 ```
@@ -176,7 +176,7 @@ session | true | 561b671b4f72695642000000
 > #### Request
 
 ```shell
-HTTP/1.1 POST /v1/checkout/prepaid
+HTTP/1.1 POST /v2/checkout/prepaid
 Content-Type: application/json
 Authorization: Bearer :session
 ```
@@ -229,7 +229,7 @@ session | true | 561b671b4f72695642000000
 > #### Request
 
 ```shell
-HTTP/1.1 POST /v1/checkout/card
+HTTP/1.1 POST /v2/checkout/card
 Content-Type: application/json
 Authorization: Bearer :session
 

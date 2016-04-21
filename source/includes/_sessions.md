@@ -5,7 +5,7 @@
 > #### Request
 
 ```shell
-HTTP/1.1 POST /v1/signup/validation
+HTTP/1.1 POST /v2/signup/validation
 Content-Type: application/json
 
 {
@@ -53,7 +53,7 @@ password | true | hUE4PT7NkuFCuG
 > #### Request
 
 ```shell
-HTTP/1.1 POST /v1/signup
+HTTP/1.1 POST /v2/signup
 Content-Type: application/json
 
 {
@@ -114,7 +114,7 @@ gender | true | Male
 > #### Request
 
 ```shell
-HTTP/1.1 POST /v1/signup/confirmation
+HTTP/1.1 POST /v2/signup/confirmation
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -158,7 +158,7 @@ code | true | ABCD
 > #### Request
 
 ```shell
-HTTP/1.1 POST /v1/authentication
+HTTP/1.1 POST /v2/authentication
 Content-Type: application/json
 
 {
@@ -205,7 +205,7 @@ password | true | hUE4PT7NkuFCuG
 ## Reset Password
 
 ```shell
-HTTP/1.1 POST /v1/password/reset
+HTTP/1.1 POST /v2/password/reset
 Content-Type: application/json
 
 {
