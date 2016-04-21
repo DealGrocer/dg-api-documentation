@@ -51,7 +51,7 @@
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /v1/signup/validation
+<pre class="highlight shell"><code>HTTP/1.1 POST /v2/signup/validation
 Content-Type: application/json
 
 <span class="o">{</span>
@@ -115,7 +115,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /v1/signup
+<pre class="highlight shell"><code>HTTP/1.1 POST /v2/signup
 Content-Type: application/json
 
 <span class="o">{</span>
@@ -208,7 +208,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /v1/signup/confirmation
+<pre class="highlight shell"><code>HTTP/1.1 POST /v2/signup/confirmation
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -264,7 +264,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /v1/authentication
+<pre class="highlight shell"><code>HTTP/1.1 POST /v2/authentication
 Content-Type: application/json
 
 <span class="o">{</span>
@@ -323,7 +323,7 @@ Content-Type: application/json
 </tbody></table>
 
 <h2 id="reset-password">Reset Password</h2>
-<pre class="highlight shell"><code>HTTP/1.1 POST /v1/password/reset
+<pre class="highlight shell"><code>HTTP/1.1 POST /v2/password/reset
 Content-Type: application/json
 
 <span class="o">{</span>
@@ -374,7 +374,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/location?latitude<span class="o">=</span>:latitude&amp;longitude<span class="o">=</span>:longitude&amp;accuracy<span class="o">=</span>:accuracy
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/location?latitude<span class="o">=</span>:latitude&amp;longitude<span class="o">=</span>:longitude&amp;accuracy<span class="o">=</span>:accuracy
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -431,7 +431,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/locations?location<span class="o">=</span>:location
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/locations?location<span class="o">=</span>:location
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -559,7 +559,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/collections
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/collections
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -611,7 +611,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/dashboard/mobile?location<span class="o">=</span>:location&amp;page<span class="o">=</span>:page
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/dashboard/mobile?location<span class="o">=</span>:location&amp;page<span class="o">=</span>:page
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -878,7 +878,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/collections/:collection/deals
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/collections/:collection/deals
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -953,7 +953,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/locations/:location/deals
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/locations/:location/deals
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -1028,7 +1028,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/deals?page<span class="o">=</span>:page
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/deals?page<span class="o">=</span>:page
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -1100,7 +1100,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/deals/:deal
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/deals/:deal
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -1706,7 +1706,7 @@ Content-Type: application/json
 <blockquote>
 <h5 id="request">Request</h5>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/settings
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/settings
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -1751,7 +1751,7 @@ Content-Type: application/json
 <blockquote>
 <h5 id="request">Request</h5>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /v1/settings
+<pre class="highlight shell"><code>HTTP/1.1 POST /v2/settings
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -1797,7 +1797,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/tokens/braintree
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/tokens/braintree
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -1842,7 +1842,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/cards
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/cards
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -1919,7 +1919,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /v1/cards/new
+<pre class="highlight shell"><code>HTTP/1.1 POST /v2/cards/new
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -1976,7 +1976,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 DELETE /v1/cards/delete
+<pre class="highlight shell"><code>HTTP/1.1 DELETE /v2/cards/delete
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -2024,7 +2024,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/checkout
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/checkout
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -2089,7 +2089,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /v1/checkout/prepayment/use
+<pre class="highlight shell"><code>HTTP/1.1 POST /v2/checkout/prepayment/use
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -2154,7 +2154,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /v1/checkout/prepayment/unuse
+<pre class="highlight shell"><code>HTTP/1.1 POST /v2/checkout/prepayment/unuse
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -2219,7 +2219,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /v1/checkout/prepaid
+<pre class="highlight shell"><code>HTTP/1.1 POST /v2/checkout/prepaid
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -2280,7 +2280,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 POST /v1/checkout/card
+<pre class="highlight shell"><code>HTTP/1.1 POST /v2/checkout/card
 Content-Type: application/json
 Authorization: Bearer :session
 
@@ -2360,7 +2360,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/coupons
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/coupons
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -2437,7 +2437,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/coupons/:deal
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/coupons/:deal
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
@@ -2489,6 +2489,45 @@ Content-Type: application/json
 </tr>
 </tbody></table>
 
+<h2 id="count">Count</h2>
+
+<blockquote>
+<h4 id="request">Request</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/coupons/count
+Content-Type: application/json
+Authorization: Bearer :session
+</code></pre>
+
+<blockquote>
+<h4 id="response">Response</h4>
+</blockquote>
+<pre class="highlight shell"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+<span class="o">{</span>
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"count"</span>: 104
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>Get coupon count.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>true</td>
+<td>561b671b4f72695642000000</td>
+</tr>
+</tbody></table>
+
           <h1 id="installments">Installments</h1>
 
 <h2 id="list">List</h2>
@@ -2496,7 +2535,7 @@ Content-Type: application/json
 <blockquote>
 <h4 id="request">Request</h4>
 </blockquote>
-<pre class="highlight shell"><code>HTTP/1.1 GET /v1/installments
+<pre class="highlight shell"><code>HTTP/1.1 GET /v2/installments
 Content-Type: application/json
 Authorization: Bearer :session
 </code></pre>
